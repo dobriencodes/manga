@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manga Collection</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink:       #1a1410;
+  --ink-mid:   #4a3f35;
+  --ink-light: #8a7a6a;
+  --ink-faint: #bbb0a0;
+  --paper:     #faf8f4;
+  --paper2:    #f3ede3;
+  --paper3:    #ece5d8;
+  --rule:      #e0d8cc;
+  --rule2:     #c8bfb0;
+
+  --jp-complete:  #2a5c2a; --jp-complete-bg:  #eef5ee;
+  --jp-ongoing:   #1e3d6e; --jp-ongoing-bg:   #edf1f8;
+  --jp-hiatus:    #6e2a6e; --jp-hiatus-bg:    #f5eef5;
+  --en-collected: #1a5c3a; --en-collected-bg: #ecf6f1;
+  --en-caughtup:  #1a5c3a; --en-caughtup-bg:  #ecf6f1;
+  --en-behind:    #7a4a08; --en-behind-bg:    #fdf4e7;
+  --en-catchup:   #7a1a1a; --en-catchup-bg:   #fdf0ee;
+  --own-full:     #1a4a2a; --own-full-bg:     #edf5f0;
+  --own-part:     #5a3a08; --own-part-bg:     #fdf3e3;
+  --own-sing:     #1a2a5a; --own-sing-bg:     #edf0f9;
+  --own-keep:     #5a3a00; --own-keep-bg:     #fdf6e3;
+  --donate:       #8b1a1a; --donate-bg:       #fdf0ee;
+}
+
+*, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+body { font-family:'Source Serif 4',Georgia,serif; background:var(--paper); color:var(--ink); font-size:13px; line-height:1.5; }
+
+.page-header { background:var(--ink); color:var(--paper); padding:18px 24px 14px; display:flex; align-items:baseline; gap:16px; border-bottom:3px solid var(--ink-mid); }
+.page-header h1 { font-family:'Playfair Display',serif; font-size:1.55rem; font-weight:700; line-height:1; flex-shrink:0; }
+.page-header .meta { font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--ink-faint); letter-spacing:.1em; text-transform:uppercase; }
+
+.stats-strip { background:var(--paper2); border-bottom:2px solid var(--ink); display:flex; overflow-x:auto; }
+.stat { padding:8px 18px; border-right:1px solid var(--rule2); flex-shrink:0; text-align:center; }
+.stat-val { font-family:'Playfair Display',serif; font-size:1.45rem; font-weight:700; line-height:1; }
+.stat-key { font-family:'IBM Plex Mono',monospace; font-size:9px; text-transform:uppercase; letter-spacing:.1em; color:var(--ink-light); margin-top:2px; }
+
+.toolbar { background:var(--paper); border-bottom:1px solid var(--rule2); padding:9px 18px; display:flex; gap:7px; flex-wrap:wrap; align-items:center; position:sticky; top:0; z-index:50; box-shadow:0 1px 0 var(--rule), 0 3px 8px rgba(0,0,0,.04); }
+.srch { position:relative; flex:1; min-width:140px; max-width:220px; }
+.srch::before { content:'⌕'; position:absolute; left:8px; top:50%; transform:translateY(-50%); color:var(--ink-light); font-size:14px; pointer-events:none; }
+input[type=text] { width:100%; background:var(--paper2); border:1px solid var(--rule2); border-radius:2px; color:var(--ink); font-family:'Source Serif 4',serif; font-size:12.5px; padding:5px 8px 5px 26px; outline:none; transition:border-color .15s; }
+input[type=text]:focus { border-color:var(--ink-mid); }
+input[type=text]::placeholder { color:var(--ink-faint); }
+select { background:var(--paper2); border:1px solid var(--rule2); border-radius:2px; color:var(--ink); font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.02em; padding:5px 9px; outline:none; cursor:pointer; transition:border-color .15s; }
+select:focus { border-color:var(--ink-mid); }
+select option { background:var(--paper); }
+.tb-sep { width:1px; height:18px; background:var(--rule2); flex-shrink:0; }
+.fg { display:flex; align-items:center; gap:4px; flex-shrink:0; }
+.fl { font-family:'IBM Plex Mono',monospace; font-size:9px; text-transform:uppercase; letter-spacing:.1em; color:var(--ink-light); margin-right:2px; }
+.fc { font-family:'IBM Plex Mono',monospace; font-size:10.5px; letter-spacing:.02em; padding:3px 9px; border-radius:2px; border:1px solid var(--rule2); background:var(--paper2); color:var(--ink-faint); cursor:pointer; white-space:nowrap; transition:all .12s; }
+.fc.on { border-color:var(--ink-mid); background:var(--paper3); color:var(--ink); }
+
+.col-wrap { position:relative; }
+.col-btn { background:var(--paper2); border:1px solid var(--rule2); border-radius:2px; color:var(--ink-mid); font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.04em; padding:5px 11px; cursor:pointer; transition:border-color .15s; }
+.col-btn:hover { border-color:var(--ink-mid); color:var(--ink); }
+.col-panel { display:none; position:absolute; top:calc(100% + 4px); right:0; background:var(--paper); border:1px solid var(--rule2); border-radius:3px; padding:10px 14px; z-index:200; box-shadow:2px 3px 0 var(--rule2), 0 4px 16px rgba(0,0,0,.08); min-width:155px; }
+.col-panel.open { display:block; }
+.col-panel label { display:flex; align-items:center; gap:8px; padding:4px 0; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.03em; cursor:pointer; color:var(--ink-mid); user-select:none; }
+.col-panel label:hover { color:var(--ink); }
+.col-panel input[type=checkbox] { accent-color:var(--ink); width:13px; height:13px; }
+
+.legend { background:var(--paper2); border-bottom:1px solid var(--rule); padding:5px 18px; display:flex; gap:5px; flex-wrap:wrap; align-items:center; }
+.lk { font-family:'IBM Plex Mono',monospace; font-size:9px; text-transform:uppercase; letter-spacing:.1em; color:var(--ink-light); margin-right:2px; }
+.lsep { width:1px; background:var(--rule2); align-self:stretch; margin:0 5px; }
+.stamp { display:inline-flex; align-items:center; font-family:'IBM Plex Mono',monospace; font-size:9.5px; font-weight:500; letter-spacing:.06em; text-transform:uppercase; padding:2px 7px; border-radius:2px; border:1.5px solid currentColor; white-space:nowrap; line-height:1.4; }
+
+.tbl-wrap { overflow-x:auto; }
+table { width:100%; border-collapse:collapse; font-size:12.5px; min-width:820px; }
+thead tr { background:var(--paper3); }
+th { font-family:'IBM Plex Mono',monospace; font-size:9.5px; font-weight:500; text-transform:uppercase; letter-spacing:.1em; color:var(--ink-light); padding:7px 11px; text-align:left; border-bottom:2px solid var(--rule2); cursor:pointer; white-space:nowrap; user-select:none; }
+th:hover { color:var(--ink); }
+th .si { margin-left:2px; font-size:8px; opacity:.6; }
+td { padding:6px 11px; border-bottom:1px solid var(--rule); vertical-align:middle; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:0; }
+td.ov { overflow:visible; }
+tbody tr:nth-child(odd) td { background:#fff; }
+tbody tr:nth-child(even) td { background:var(--paper); }
+tbody tr:hover td { background:#f5efe6 !important; }
+tbody tr.donate-row td { background:#fef7f5 !important; }
+tbody tr.donate-row:hover td { background:#faeae6 !important; }
+tr:last-child td { border-bottom:none; }
+
+.c-title { font-family:'Source Serif 4',serif; font-size:13px; font-weight:600; color:var(--ink); }
+.c-donate { color:var(--donate); }
+.c-mono { font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--ink-mid); }
+.c-faint { font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--ink-light); }
+.c-gap { font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--en-behind); font-weight:500; }
+.c-gap.zero { color:var(--en-collected); }
+
+.owned-wrap { display:flex; align-items:center; gap:6px; }
+.prog { height:4px; width:48px; background:var(--rule); border-radius:2px; overflow:hidden; flex-shrink:0; }
+.prog-fill { height:100%; border-radius:1px; }
+
+.nv-date { font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink-mid); }
+.nv-date.soon { color:#8b1a1a; font-weight:500; }
+.nv-label { font-size:11px; color:var(--ink-light); font-style:italic; }
+
+.c-verified { font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--ink-faint); }
+.c-notes { font-size:11px; color:var(--ink-light); font-style:italic; }
+
+.donate-btn { font-family:'IBM Plex Mono',monospace; font-size:9.5px; letter-spacing:.05em; text-transform:uppercase; padding:2px 8px; border-radius:2px; cursor:pointer; border:1.5px solid var(--rule2); background:transparent; color:var(--ink-light); transition:all .12s; }
+.donate-btn:hover { border-color:var(--donate); color:var(--donate); }
+.donate-btn.on { border-color:var(--donate); color:var(--donate); background:var(--donate-bg); }
+
+.verify-btn { font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:.04em; text-transform:uppercase; padding:1px 6px; border-radius:2px; cursor:pointer; border:1px solid var(--rule2); background:transparent; color:var(--ink-faint); transition:all .12s; margin-left:4px; }
+.verify-btn:hover { border-color:var(--ink-mid); color:var(--ink-mid); }
+
+.empty { text-align:center; padding:60px; font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--ink-faint); letter-spacing:.05em; }
+::-webkit-scrollbar { width:5px; height:5px; }
+::-webkit-scrollbar-track { background:var(--paper2); }
+::-webkit-scrollbar-thumb { background:var(--rule2); border-radius:2px; }
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <h1>Manga Collection</h1>
+  <span class="meta" id="hdr-meta"></span>
+</div>
+
+<div class="stats-strip" id="stats"></div>
+
+<div class="toolbar">
+  <div class="srch"><input type="text" id="search" placeholder="Search…" oninput="render()"></div>
+  <div class="fg">
+    <span class="fl">JP</span>
+    <button class="fc on" id="jp-Complete">Complete</button>
+    <button class="fc on" id="jp-Ongoing">Ongoing</button>
+    <button class="fc on" id="jp-Hiatus">Hiatus</button>
+  </div>
+  <span class="tb-sep"></span>
+  <div class="fg">
+    <span class="fl">EN</span>
+    <button class="fc on" id="en-Collected">Collected</button>
+    <button class="fc on" id="en-Caught Up">Caught Up</button>
+    <button class="fc on" id="en-Behind">Behind</button>
+    <button class="fc on" id="en-Catching Up">Catching Up</button>
+  </div>
+  <span class="tb-sep"></span>
+  <div class="fg">
+    <span class="fl">Owned</span>
+    <button class="fc on" id="ow-Complete set">Complete</button>
+    <button class="fc on" id="ow-Partial run">Partial</button>
+    <button class="fc on" id="ow-Single volume">Single</button>
+    <button class="fc on" id="ow-Keepsake">Keepsake</button>
+    <button class="fc on" id="ow-Not owned">Not Owned</button>
+  </div>
+  <span class="tb-sep"></span>
+  <div class="fg">
+    <span class="fl">Donate</span>
+    <button class="fc radio on" id="don-all">All</button>
+    <button class="fc radio"    id="don-yes">🎁 With</button>
+    <button class="fc radio"    id="don-no">Without</button>
+  </div>
+  <span class="tb-sep"></span>
+  <div class="col-wrap">
+    <button class="col-btn" onclick="togglePanel(event)">Columns ▾</button>
+    <div class="col-panel" id="colPanel">
+      <label><input type="checkbox" data-col="owned"    checked onchange="applyColVis()"> Owned</label>
+      <label><input type="checkbox" data-col="prog"     checked onchange="applyColVis()"> Progress</label>
+      <label><input type="checkbox" data-col="enVols"   checked onchange="applyColVis()"> EN vols</label>
+      <label><input type="checkbox" data-col="jpVols"   checked onchange="applyColVis()"> JP vols</label>
+      <label><input type="checkbox" data-col="jpStatus" checked onchange="applyColVis()"> JP status</label>
+      <label><input type="checkbox" data-col="enStatus" checked onchange="applyColVis()"> EN status</label>
+      <label><input type="checkbox" data-col="nextVol"  checked onchange="applyColVis()"> Next vol</label>
+      <label><input type="checkbox" data-col="gap"      checked onchange="applyColVis()"> Gap</label>
+      <label><input type="checkbox" data-col="verified" checked onchange="applyColVis()"> Verified</label>
+      <label><input type="checkbox" data-col="notes"          onchange="applyColVis()"> Notes</label>
+      <label><input type="checkbox" data-col="donate"   checked onchange="applyColVis()"> Donate</label>
+    </div>
+  </div>
+</div>
+
+<div class="legend">
+  <span class="lk">JP</span>
+  <span class="stamp" style="color:var(--jp-complete);background:var(--jp-complete-bg)">Complete</span>
+  <span class="stamp" style="color:var(--jp-ongoing);background:var(--jp-ongoing-bg)">Ongoing</span>
+  <span class="stamp" style="color:var(--jp-hiatus);background:var(--jp-hiatus-bg)">Hiatus</span>
+  <span class="lsep"></span>
+  <span class="lk">EN</span>
+  <span class="stamp" style="color:var(--en-collected);background:var(--en-collected-bg)">Collected</span>
+  <span class="stamp" style="color:var(--en-caughtup);background:var(--en-caughtup-bg)">Caught Up</span>
+  <span class="stamp" style="color:var(--en-behind);background:var(--en-behind-bg)">Behind</span>
+  <span class="stamp" style="color:var(--en-catchup);background:var(--en-catchup-bg)">Catching Up</span>
+  <span class="lsep"></span>
+  <span class="lk">Own</span>
+  <span class="stamp" style="color:var(--own-full);background:var(--own-full-bg)">Complete</span>
+  <span class="stamp" style="color:var(--own-part);background:var(--own-part-bg)">Partial</span>
+  <span class="stamp" style="color:var(--own-sing);background:var(--own-sing-bg)">Single</span>
+  <span class="stamp" style="color:var(--own-keep);background:var(--own-keep-bg)">🔖 Keepsake</span>
+  <span class="lsep"></span>
+  <span class="stamp" style="color:var(--donate);background:var(--donate-bg)">🎁 Donate</span>
+</div>
+
+<div class="tbl-wrap">
+<table>
+  <thead><tr>
+    <th style="width:22%" onclick="sortBy('title')">Title <span class="si" id="s-title"></span></th>
+    <th style="width:4%"  data-col="prog" onclick="sortBy('prog')" style="cursor:pointer">Progress <span class="si" id="s-prog"></span></th>
+    <th style="width:13%" data-col="owned"    onclick="sortBy('owned')">Owned <span class="si" id="s-owned"></span></th>
+    <th style="width:7%"  data-col="enVols"   onclick="sortBy('enVols')">EN <span class="si" id="s-enVols"></span></th>
+    <th style="width:6%"  data-col="jpVols"   onclick="sortBy('jpVols')">JP <span class="si" id="s-jpVols"></span></th>
+    <th style="width:8%"  data-col="jpStatus" onclick="sortBy('jpStatus')">JP Status <span class="si" id="s-jpStatus"></span></th>
+    <th style="width:10%" data-col="enStatus" onclick="sortBy('enStatus')">EN Status <span class="si" id="s-enStatus"></span></th>
+    <th style="width:15%" data-col="nextVol"  onclick="sortBy('nextVol')">Next Vol <span class="si" id="s-nextVol"></span></th>
+    <th style="width:4%"  data-col="gap"      onclick="sortBy('gap')">Gap <span class="si" id="s-gap"></span></th>
+    <th style="width:6%"  data-col="verified" onclick="sortBy('verified')">Verified <span class="si" id="s-verified"></span></th>
+    <th style="width:7%"  data-col="notes">Notes</th>
+    <th style="width:7%"  data-col="donate">Donate</th>
+  </tr></thead>
+  <tbody id="tbody"></tbody>
+</table>
+</div>
+
+<script>
+const TODAY=new Date().toISOString().slice(0,10);
+let ALL = [];
+
+const COLS=['owned','prog','enVols','jpVols','jpStatus','enStatus','nextVol','gap','verified','notes','donate'];
+
+function jpStamp(s){
+  const c={Complete:['var(--jp-complete)','var(--jp-complete-bg)'],Ongoing:['var(--jp-ongoing)','var(--jp-ongoing-bg)'],Hiatus:['var(--jp-hiatus)','var(--jp-hiatus-bg)']};
+  const [cl,bg]=c[s]||c.Ongoing;
+  return `<span class="stamp" style="color:${cl};background:${bg}">${s}</span>`;
+}
+function enStamp(s){
+  const c={'Collected':['var(--en-collected)','var(--en-collected-bg)'],'Caught Up':['var(--en-caughtup)','var(--en-caughtup-bg)'],'Behind':['var(--en-behind)','var(--en-behind-bg)'],'Catching Up':['var(--en-catchup)','var(--en-catchup-bg)']};
+  const [cl,bg]=c[s]||c.Collected;
+  return `<span class="stamp" style="color:${cl};background:${bg}">${s}</span>`;
+}
+function ownStamp(r){
+  const s=r.ownerStatus,v=r.owned||'';
+  if(r.enStatus==='Caught Up'&&s!=='Keepsake')
+    return `<span class="stamp" style="color:var(--own-full);background:var(--own-full-bg)">${v}</span>`;
+  const c={'Complete set':['var(--own-full)','var(--own-full-bg)'],'Partial run':['var(--own-part)','var(--own-part-bg)'],'Single volume':['var(--own-sing)','var(--own-sing-bg)'],'Keepsake':['var(--own-keep)','var(--own-keep-bg)'],'Not owned':['var(--ink-light)','var(--paper3)']};
+  const [cl,bg]=c[s]||c['Single volume'];
+  const label=s==='Keepsake'?`${v} 🔖`:s==='Not owned'?'Not owned':v;
+  return `<span class="stamp" style="color:${cl};background:${bg}">${label}</span>`;
+}
+
+function progress(r){
+  const t=r.enVols||'';
+  if(t.includes('bilingual')) return null;
+  // Use manual override if present
+  if(r.progOverride){
+    const bareM=t.match(/^(\d+)/);
+    const total=bareM?+bareM[1]:null;
+    return total?Math.min(1,+r.progOverride/total):null;
+  }
+  // Parse total from enVols — grab first number
+  const bareM=t.match(/^(\d+)/);
+  const total=bareM?+bareM[1]:null;
+  if(!total) return null;
+  // Parse owned — grab the last number anywhere in the string
+  const ownM=(r.owned||'').match(/(\d+)[^\d]*$/);
+  const own=ownM?+ownM[1]:null;
+  return (own!=null)?Math.min(1,own/total):null;
+}
+function progColor(p){ return p>=1?'#2a6a3a':p>=0.5?'#8a6010':'#8b2020'; }
+
+function nextHtml(r){
+  const nv=r.nextVol||'';
+  if(!nv) return `<span class="c-faint">—</span>`;
+  const m=nv.match(/^(\d{4}-\d{2}-\d{2})\s*—\s*(.+)$/);
+  if(m){
+    const [y,mo,d]=m[1].split('-').map(Number);
+    const parsed=new Date(y,mo-1,d);
+    const diff=(parsed-new Date())/864e5;
+    const soon=diff>=0&&diff<=21;
+    const dt=parsed.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
+    return `<span class="nv-date${soon?' soon':''}">${dt}</span> <span class="nv-label">${m[2]}</span>`;
+  }
+  return `<span class="nv-label">${nv.replace(/^TBD\s*—?\s*/,'')}</span>`;
+}
+
+let sortCol='title',sortDir=1;
+function sortBy(c){ sortCol===c?sortDir*=-1:(sortCol=c,sortDir=1); render(); }
+
+function getVis(){
+  const v={};
+  COLS.forEach(c=>{ const cb=document.querySelector(`#colPanel input[data-col="${c}"]`); v[c]=cb?cb.checked:true; });
+  return v;
+}
+function applyColVis(){
+  const v=getVis();
+  COLS.forEach(c=>{ const th=document.querySelector(`th[data-col="${c}"]`); if(th) th.style.display=v[c]?'':'none'; });
+  render();
+}
+function togglePanel(e){ e.stopPropagation(); document.getElementById('colPanel').classList.toggle('open'); }
+document.addEventListener('click',()=>document.getElementById('colPanel').classList.remove('open'));
+
+function toggleDonate(title){
+  const r=ALL.find(x=>x.title===title);
+  if(r){ r.donate=!r.donate; render(); }
+}
+function stampVerified(title){
+  const r=ALL.find(x=>x.title===title);
+  if(r){ r.verified=TODAY; render(); }
+}
+
+// Filter state — plain JS objects, no DOM reading
+const F = {
+  jp:    new Set(['Complete','Ongoing','Hiatus']),
+  en:    new Set(['Collected','Caught Up','Behind','Catching Up']),
+  owner: new Set(['Complete set','Partial run','Single volume','Keepsake','Not owned']),
+  donate: 'all'
+};
+
+function setupChips() {
+  // Toggle chips (multi-select)
+  ['jp-Complete','jp-Ongoing','jp-Hiatus'].forEach(id => {
+    document.getElementById(id).addEventListener('click', function() {
+      const val = id.slice(3);
+      if (F.jp.has(val)) { F.jp.delete(val); this.classList.remove('on'); }
+      else               { F.jp.add(val);    this.classList.add('on'); }
+      render();
+    });
+  });
+  ['en-Collected','en-Caught Up','en-Behind','en-Catching Up'].forEach(id => {
+    document.getElementById(id).addEventListener('click', function() {
+      const val = id.slice(3);
+      if (F.en.has(val)) { F.en.delete(val); this.classList.remove('on'); }
+      else               { F.en.add(val);    this.classList.add('on'); }
+      render();
+    });
+  });
+  ['ow-Complete set','ow-Partial run','ow-Single volume','ow-Keepsake','ow-Not owned'].forEach(id => {
+    document.getElementById(id).addEventListener('click', function() {
+      const val = id.slice(3);
+      if (F.owner.has(val)) { F.owner.delete(val); this.classList.remove('on'); }
+      else                  { F.owner.add(val);    this.classList.add('on'); }
+      render();
+    });
+  });
+  // Radio chips (single-select)
+  ['don-all','don-yes','don-no'].forEach(id => {
+    document.getElementById(id).addEventListener('click', function() {
+      F.donate = id.slice(4);
+      document.querySelectorAll('#don-all,#don-yes,#don-no').forEach(b => b.classList.remove('on'));
+      this.classList.add('on');
+      render();
+    });
+  });
+}
+
+function render(){
+  const q=document.getElementById('search').value.toLowerCase();
+
+  let rows=ALL.filter(r=>{
+    if(q&&!r.title.toLowerCase().includes(q)) return false;
+    if(F.jp.size>0    && !F.jp.has(r.jpStatus))    return false;
+    if(F.en.size>0    && !F.en.has(r.enStatus))     return false;
+    if(F.owner.size>0 && !F.owner.has(r.ownerStatus)) return false;
+    if(F.donate==='yes' && !r.donate)  return false;
+    if(F.donate==='no'  &&  r.donate)  return false;
+    return true;
+  });
+
+  rows.sort((a,b)=>{
+    let av=a[sortCol]??'',bv=b[sortCol]??'';
+    if(sortCol==='nextVol'){
+      const aE=!av||av.startsWith('TBD'),bE=!bv||bv.startsWith('TBD');
+      if(aE&&!bE) return 1;
+      if(!aE&&bE) return -1;
+    }
+    if(sortCol==='gap'){
+      av=parseFloat(av)||0; bv=parseFloat(bv)||0;
+      return (av-bv)*sortDir;
+    }
+    if(sortCol==='prog'){
+      av=progress(a)??-1; bv=progress(b)??-1;
+      return (av-bv)*sortDir;
+    }
+    if(typeof av==='string') av=av.toLowerCase();
+    if(typeof bv==='string') bv=bv.toLowerCase();
+    return av<bv?-sortDir:av>bv?sortDir:0;
+  });
+
+  ['title','owned','enVols','jpVols','jpStatus','enStatus','nextVol','gap','verified','prog'].forEach(c=>{
+    const el=document.getElementById('s-'+c);
+    if(el) el.textContent=sortCol===c?(sortDir===1?'▲':'▼'):'';
+  });
+
+  const vis=getVis();
+  const tbody=document.getElementById('tbody');
+
+  if(!rows.length){
+    tbody.innerHTML=`<tr><td colspan="${1+COLS.filter(c=>vis[c]).length}" class="empty">No results.</td></tr>`;
+    updateStats(rows); return;
+  }
+
+  tbody.innerHTML=rows.map(r=>{
+    const p=progress(r);
+    const bar=p!=null?`<div class="prog"><div class="prog-fill" style="width:${Math.round(p*100)}%;background:${progColor(p)}"></div></div>`:'';
+    const rowCls=r.donate?'donate-row':'';
+    const titlePrefix=r.donate?'🎁 ':'';
+    const titleCls=`c-title${r.donate?' c-donate':''}`;
+    const safeTitle=r.title.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
+
+    const isKeepsake=r.ownerStatus==='Keepsake';
+    const gapVal=(!isKeepsake&&r.gap!=null&&r.gap!=='null')?parseInt(r.gap):null;
+    const gapHtml=isKeepsake?`<span class="c-faint">🔖</span>`:gapVal!=null?(gapVal===0?`<span class="c-gap zero">✓</span>`:`<span class="c-gap">−${gapVal}</span>`):`<span class="c-faint">—</span>`;
+
+    const verDate=r.verified?r.verified.slice(5):'—';
+    const verHtml=`<span class="c-verified">${verDate}</span><button class="verify-btn" onclick="stampVerified('${safeTitle}');event.stopPropagation()" title="Mark verified today">✓</button>`;
+
+    return `<tr class="${rowCls}">
+      <td class="${titleCls}" title="${r.title}">${titlePrefix}${r.title}</td>
+      ${vis.prog?`<td style="padding:0 8px">${p!=null?`<div class="prog" style="width:36px"><div class="prog-fill" style="width:${Math.round(p*100)}%;background:${progColor(p)}"></div></div>`:'<span class="c-faint">—</span>'}</td>`:''}
+      ${vis.owned?`<td><div class="owned-wrap">${ownStamp(r)}</div></td>`:''}
+      ${vis.enVols?`<td class="c-mono">${r.enVols||'—'}</td>`:''}
+      ${vis.jpVols?`<td class="c-faint">${r.jpVols||'—'}</td>`:''}
+      ${vis.jpStatus?`<td class="ov">${jpStamp(r.jpStatus)}</td>`:''}
+      ${vis.enStatus?`<td class="ov">${enStamp(r.enStatus)}</td>`:''}
+      ${vis.nextVol?`<td>${nextHtml(r)}</td>`:''}
+      ${vis.gap?`<td>${gapHtml}</td>`:''}
+      ${vis.verified?`<td>${verHtml}</td>`:''}
+      ${vis.notes?`<td class="c-notes" title="${r.notes||''}">${r.notes||'—'}</td>`:''}
+      ${vis.donate?`<td><button class="donate-btn${r.donate?' on':''}" onclick="toggleDonate('${safeTitle}');event.stopPropagation()">${r.donate?'🎁 Marked':'Mark'}</button></td>`:''}
+    </tr>`;
+  }).join('');
+
+  updateStats(rows);
+}
+
+function updateStats(rows){
+  const don=ALL.filter(r=>r.donate).length;
+  const caughtUp=ALL.filter(r=>r.enStatus==='Caught Up').length;
+  const totalGap=ALL.reduce((s,r)=>s+(!r.donate&&r.ownerStatus!=='Keepsake'&&r.gap&&r.gap!=='null'?parseInt(r.gap)||0:0),0);
+
+  document.getElementById('stats').innerHTML=[
+    ['Series',ALL.length],
+    ['Showing',rows.length],
+    ['JP Complete',ALL.filter(r=>r.jpStatus==='Complete').length],
+    ['JP Ongoing',ALL.filter(r=>r.jpStatus==='Ongoing').length],
+    ['EN Collected',ALL.filter(r=>r.enStatus==='Collected').length],
+    ['Caught Up',caughtUp],
+    ['EN Behind',ALL.filter(r=>r.enStatus==='Behind').length],
+    ['Vols Missing',totalGap],
+    ['To Donate',don],
+  ].map(([k,v])=>`<div class="stat"><div class="stat-val">${v}</div><div class="stat-key">${k}</div></div>`).join('');
+
+  document.getElementById('hdr-meta').textContent=`${ALL.length} series`;
+}
+
+async function boot(){
+  const tb=document.getElementById('tbody');
+  try{
+    const res=await fetch('data.json',{cache:'no-store'});
+    if(!res.ok) throw new Error('HTTP '+res.status);
+    ALL=await res.json();
+  }catch(err){
+    tb.innerHTML='<tr><td colspan="20" class="empty">Could not load data.json — '+err.message+'. If you opened this file directly (file://), serve it over http instead — run "python3 -m http.server" in this folder, or deploy to GitHub Pages.</td></tr>';
+    return;
+  }
+  setupChips();
+  render();
+}
+boot();
+</script>
+</body>
+</html>
