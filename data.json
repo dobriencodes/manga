@@ -899,7 +899,7 @@
     "nextVol": "2026-07-07 — Vol. 112",
     "notes": "VIZ; owns 1–23, Box Set 2 (vols 24–46), 101–111; missing vols 47–100",
     "donate": false,
-    "gap": "57",
+    "gap": "54",
     "verified": "2026-04-22"
   },
   {
@@ -1180,20 +1180,6 @@
     "notes": "VIZ; B&N exclusive variant cover vol 1; keepsake only",
     "gap": null,
     "verified": "2026-04-28",
-    "donate": false
-  },
-  {
-    "title": "My Favorite VTuber Is Scary IRL",
-    "owned": "1–2",
-    "ownerStatus": "Partial run",
-    "jpStatus": "Ongoing",
-    "enStatus": "Caught Up",
-    "enVols": "2",
-    "jpVols": "4+",
-    "nextVol": "2026-10-13 — Vol. 3",
-    "notes": "Square Enix Manga; vol 1 Feb 24 2026, vol 2 Jun 9 2026, vol 3 Oct 13 2026; JP at 4 vols",
-    "gap": "0",
-    "verified": "2026-05-26",
     "donate": false
   }
 ]
