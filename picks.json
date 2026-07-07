@@ -3,159 +3,24 @@
   "range": "July – August 2026",
   "note": "All debut-volume manga (no light novels) releasing this month and next per otakucalendar.com, ranked against your collection. Covers link to Barnes & Noble.",
   "items": [
-    {
-      "tier": "S",
-      "t": "Champion of the Rose, Vol. 1",
-      "meta": "Jul 14 · VIZ · queer seinen fantasy",
-      "why": "Colonialism, religious horror and a trans swordsman champion — artsy queer seinen right in The Summer Hikaru Died lane.",
-      "url": "https://www.barnesandnoble.com/s/Champion%20of%20the%20Rose"
-    },
-    {
-      "tier": "A",
-      "t": "Hima-Ten!, Vol. 1",
-      "meta": "Jul 7 · VIZ · shonen romcom",
-      "why": "Shonen Jump's new part-timer-meets-model romcom; breezy VIZ slice-of-life in your Skip and Loafer wheelhouse.",
-      "url": "https://www.barnesandnoble.com/s/Hima-Ten%21"
-    },
-    {
-      "tier": "A",
-      "t": "Seeds of Anxiety*, Vol. 1",
-      "meta": "Jul 28 · Yen Press · horror",
-      "why": "Nakayama's legendary Fuan no Tane finally in print — surreal short-form dread for the horror shelf.",
-      "url": "https://www.barnesandnoble.com/s/Seeds%20of%20Anxiety%2A"
-    },
-    {
-      "tier": "A",
-      "t": "Beneath the Fur, Vol. 1",
-      "meta": "Jul 28 · Yen Press · yuri",
-      "why": "A fox falls for the rabbit it meant to eat — a soft predator/prey yuri debut for the GL streak.",
-      "url": "https://www.barnesandnoble.com/s/Beneath%20the%20Fur"
-    },
-    {
-      "tier": "A",
-      "t": "Daydream Darling, Vol. 1",
-      "meta": "Aug 4 · VIZ Shojo Beat · shoujo romance",
-      "why": "New romance from Io Sakisaka (Ao Haru Ride) — polished, tender slice-of-life romcom.",
-      "url": "https://www.barnesandnoble.com/s/Daydream%20Darling"
-    },
-    {
-      "tier": "A",
-      "t": "I'm Fine With Being the Second Girlfriend, Vol. 1",
-      "meta": "Jul 14 · Ghost Ship · mature romcom",
-      "why": "Two people settling for second-best; a grown-up, spicy romcom under the Ghost Ship label.",
-      "url": "https://www.barnesandnoble.com/s/I%27m%20Fine%20With%20Being%20the%20Second%20Girlfriend"
-    },
-    {
-      "tier": "B",
-      "t": "Blue Summer Haze, Vol. 1",
-      "meta": "Jul 7 · Kodansha · sports BL",
-      "why": "A baseball-team love triangle — sports-manga energy meets BL; worth a look if the story holds.",
-      "url": "https://www.barnesandnoble.com/s/Blue%20Summer%20Haze"
-    },
-    {
-      "tier": "B",
-      "t": "You Might As Well Be the One, Vol. 1",
-      "meta": "Aug 11 · Kodansha · josei romance",
-      "why": "Dessert-magazine romance about being liked for who you are — grounded slice-of-life romcom.",
-      "url": "https://www.barnesandnoble.com/s/You%20Might%20As%20Well%20Be%20the%20One"
-    },
-    {
-      "tier": "B",
-      "t": "Liste Rouge, Vol. 1",
-      "meta": "Jul 28 · Yen Press · fantasy drama",
-      "why": "Humans as endangered species in a chimera world — moody, atmospheric fantasy romance.",
-      "url": "https://www.barnesandnoble.com/s/Liste%20Rouge"
-    },
-    {
-      "tier": "B",
-      "t": "Luca the Dragon Vet, Vol. 1",
-      "meta": "Jul 28 · Kodansha · fantasy adventure",
-      "why": "A magical medical drama on dragonback — cozy, workmanlike fantasy slice-of-life.",
-      "url": "https://www.barnesandnoble.com/s/Luca%20the%20Dragon%20Vet"
-    },
-    {
-      "tier": "B",
-      "t": "Seven Sundays, Vol. 1",
-      "meta": "Jul 21 · Ize Press · BL manhwa",
-      "why": "Firefighter reunites with his first love, now a single dad — full-color BL manhwa judged on a solid hook.",
-      "url": "https://www.barnesandnoble.com/s/Seven%20Sundays"
-    },
-    {
-      "tier": "B",
-      "t": "Magic Doctor Rex's Perverted Medical Record, Vol. 1",
-      "meta": "Jul 28 · Yen Press · ecchi fantasy",
-      "why": "Post-Demon-King clinic comedy of very odd ailments — squarely for the ecchi shelf.",
-      "url": "https://www.barnesandnoble.com/s/Magic%20Doctor%20Rex%27s%20Perverted%20Medical%20Record"
-    },
-    {
-      "tier": "B",
-      "t": "Catnaps, Catnaps Everywhere!, Vol. 1",
-      "meta": "Jul 14 · Seven Seas · cat slice-of-life",
-      "why": "PANDANIA's lazy-cat gag comic — light Days on Fes-style comfort reading.",
-      "url": "https://www.barnesandnoble.com/s/Catnaps"
-    },
-    {
-      "tier": "B",
-      "t": "Solo Leveling: Ragnarok, Vol. 1",
-      "meta": "Jul 21 · Yen Press · action manhwa",
-      "why": "The Solo Leveling sequel comic — liquid action, though the leveling/isekai frame isn't your core.",
-      "url": "https://www.barnesandnoble.com/s/Solo%20Leveling%3A%20Ragnarok"
-    },
-    {
-      "tier": "C",
-      "t": "The Bubble Love of the Mermaid, Vol. 1",
-      "meta": "Jul 28 · Yen Press · romantic fantasy",
-      "why": "Agitogi (My Happy Marriage) mermaid romance — pretty but conventional; only if curious.",
-      "url": "https://www.barnesandnoble.com/s/The%20Bubble%20Love%20of%20the%20Mermaid"
-    },
-    {
-      "tier": "C",
-      "t": "The Princess Groom, Vol. 1",
-      "meta": "Aug 4 · Manga UP! · fantasy romance",
-      "why": "Role-reversal romance, a double-identity 'princess' and a cursed prince — fun premise, niche.",
-      "url": "https://www.barnesandnoble.com/s/The%20Princess%20Groom"
-    },
-    {
-      "tier": "C",
-      "t": "Marriage to the Wolf: An Interspecies Union, Vol. 1",
-      "meta": "Jul 14 · Seven Seas · BL",
-      "why": "Arranged wolf-and-rabbit BL debut — sweet but slight unless the story wins you over.",
-      "url": "https://www.barnesandnoble.com/s/Marriage%20to%20the%20Wolf%3A%20An%20Interspecies%20Union"
-    },
-    {
-      "tier": "C",
-      "t": "The Crow's Ballad at Dawn, Vol. 1",
-      "meta": "Jul 28 · Yen Press · BL",
-      "why": "Red-light-district love story — atmospheric BL one-shot for a curious pick.",
-      "url": "https://www.barnesandnoble.com/s/The%20Crow%27s%20Ballad%20at%20Dawn"
-    },
-    {
-      "tier": "C",
-      "t": "Comeback After Fate, Vol. 1",
-      "meta": "Aug 18 · Kodansha · BL omegaverse",
-      "why": "Single-volume omegaverse BL — self-contained, only if the setup grabs you.",
-      "url": "https://www.barnesandnoble.com/s/Comeback%20After%20Fate"
-    },
-    {
-      "tier": "C",
-      "t": "Mistress Kanan is Devilishly Easy (Omnibus), Vol. 1",
-      "meta": "Jul 14 · Kodansha · ecchi romcom",
-      "why": "Teasing ecchi romcom in a two-in-one omnibus — light fan-service fare.",
-      "url": "https://www.barnesandnoble.com/s/Mistress%20Kanan%20is%20Devilishly%20Easy%20%28Omnibus%29"
-    },
-    {
-      "tier": "D",
-      "t": "Not Your Typical Reincarnation Story, Vol. 1",
-      "meta": "Jul 14 · Yen Press · villainess isekai",
-      "why": "Villainess-reincarnation webtoon romance — squarely the isekai lane you skip.",
-      "url": "https://www.barnesandnoble.com/s/Not%20Your%20Typical%20Reincarnation%20Story"
-    },
-    {
-      "tier": "D",
-      "t": "History of the Kingdom of Orcsen, Vol. 1",
-      "meta": "Jul 7 · Seven Seas · isekai grimdark fantasy",
-      "why": "Orcs burning down elfland — grimdark isekai war fantasy, not your shelf.",
-      "url": "https://www.barnesandnoble.com/s/History%20of%20the%20Kingdom%20of%20Orcsen"
-    }
+    {"tier":"S","t":"The Drops of God: New World, Vol. 1","meta":"Jul 14 · Kodansha · wine seinen","why":"Contemporary artsy seinen that is exactly your top lane — the legendary wine drama returns in a fresh entry point.","url":"https://www.barnesandnoble.com/s/The Drops of God New World"},
+    {"tier":"S","t":"Seeds of Anxiety, Vol. 1","meta":"Jul 28 · Yen Press · horror","why":"Masaaki Nakayama's landmark J-horror shorts finally in print — quiet, creeping dread in the vein of The Summer Hikaru Died.","url":"https://www.barnesandnoble.com/s/Seeds of Anxiety"},
+    {"tier":"A","t":"Champion of the Rose, Vol. 1","meta":"Jul 14 · VIZ Originals · action fantasy","why":"VIZ original with real artistic ambition — anti-imperialist epic with religious horror and queer heart, an artsy swing like Blue Period.","url":"https://www.barnesandnoble.com/s/Champion of the Rose"},
+    {"tier":"A","t":"Hima-Ten!, Vol. 1","meta":"Jul 7 · VIZ · slice-of-life romcom","why":"VIZ Shonen Jump slice-of-life romcom — right in the Skip and Loafer pocket you already love.","url":"https://www.barnesandnoble.com/s/Hima-Ten"},
+    {"tier":"A","t":"Blue Summer Haze, Vol. 1","meta":"Jul 7 · Kodansha · sports BL","why":"A baseball BL with a catcher/pitcher love triangle — sports manga is your lane and the story earns its spot.","url":"https://www.barnesandnoble.com/s/Blue Summer Haze"},
+    {"tier":"B","t":"Daydream Darling, Vol. 1","meta":"Aug 4 · VIZ · shojo romance","why":"New romance from Io Sakisaka (Ao Haru Ride) — gentle anxious-crush shojo, VIZ pedigree.","url":"https://www.barnesandnoble.com/s/Daydream Darling"},
+    {"tier":"B","t":"I'm Fine With Being the Second Girlfriend, Vol. 1","meta":"Jul 14 · Seven Seas · romance drama ecchi","why":"Messy settling-for-second romance drama with an ecchi edge — hits your romcom/ecchi streak.","url":"https://www.barnesandnoble.com/s/Im Fine With Being the Second Girlfriend"},
+    {"tier":"B","t":"Luca the Dragon Vet, Vol. 1","meta":"Jul 28 · Kodansha · fantasy seinen","why":"A grounded medical-drama seinen from Morning two — more craft than the average fantasy debut.","url":"https://www.barnesandnoble.com/s/Luca the Dragon Vet"},
+    {"tier":"B","t":"Beneath the Fur, Vol. 1","meta":"Jul 28 · Yen Press · slice-of-life iyashikei","why":"Cozy fox-and-rabbit iyashikei — a Days on Fes-adjacent low-key hangout read.","url":"https://www.barnesandnoble.com/s/Beneath the Fur"},
+    {"tier":"B","t":"You Might As Well Be the One, Vol. 1","meta":"Aug 11 · Kodansha · romance","why":"Understated college romcom about being liked for who you are — worth a look if the slice-of-life shelf has room.","url":"https://www.barnesandnoble.com/s/You Might As Well Be the One"},
+    {"tier":"C","t":"Liste Rouge, Vol. 1","meta":"Jul 28 · Yen Press · shojo fantasy","why":"Chimera-and-human shojo fantasy — fine art but outside your usual lane.","url":"https://www.barnesandnoble.com/s/Liste Rouge"},
+    {"tier":"C","t":"The Bubble Love of the Mermaid, Vol. 1","meta":"Jul 28 · Yen Press · romantic fantasy","why":"My Happy Marriage creator's new romantic fantasy — only if that flavor calls to you.","url":"https://www.barnesandnoble.com/s/The Bubble Love of the Mermaid"},
+    {"tier":"C","t":"The Princess Groom, Vol. 1","meta":"Aug 4 · Manga UP! · josei fantasy romance","why":"Role-reversal royal romance — charming premise but not a core fit.","url":"https://www.barnesandnoble.com/s/The Princess Groom"},
+    {"tier":"C","t":"Mistress Kanan is Devilishly Easy, Omnibus Vol. 1-2","meta":"Jul 14 · Seven Seas · ecchi romcom","why":"Ghost Ship ecchi romcom omnibus — scratches the ecchi itch, nothing more.","url":"https://www.barnesandnoble.com/s/Mistress Kanan is Devilishly Easy"},
+    {"tier":"C","t":"Magic Doctor Rex's Perverted Medical Record, Vol. 1","meta":"Jul 28 · ecchi fantasy","why":"Ecchi gag fantasy — only if you're in the mood for it.","url":"https://www.barnesandnoble.com/s/Magic Doctor Rex Perverted Medical Record"},
+    {"tier":"C","t":"Marriage to the Wolf: An Interspecies Union, Vol. 1","meta":"Jul 14 · Seven Seas · fantasy romance","why":"Interspecies romance fantasy — mild fit, browse before buying.","url":"https://www.barnesandnoble.com/s/Marriage to the Wolf An Interspecies Union"},
+    {"tier":"C","t":"Solo Leveling: Ragnarok, Vol. 1","meta":"Jul 21 · Yen Press · action manhwa","why":"The Solo Leveling sequel comic — slick action but the leveling-power genre isn't really your thing.","url":"https://www.barnesandnoble.com/s/Solo Leveling Ragnarok"},
+    {"tier":"D","t":"History of the Kingdom of Orcsen, Vol. 1","meta":"Jul 7 · isekai fantasy","why":"Orcish nation-building isekai — near the bottom of your interests.","url":"https://www.barnesandnoble.com/s/History of the Kingdom of Orcsen"},
+    {"tier":"D","t":"Not Your Typical Reincarnation Story, Vol. 1","meta":"Jul 14 · isekai","why":"Another reincarnation isekai — not your lane despite the title's promise.","url":"https://www.barnesandnoble.com/s/Not Your Typical Reincarnation Story"}
   ]
 }
