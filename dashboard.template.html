@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manga Maintenance</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0/dist/chart.umd.js" integrity="sha384-iU8HYtnGQ8Cy4zl7gbNMOhsDTTKX02BTXptVP/vqAWIaTfM7isw76iyZCsjL2eVi" crossorigin="anonymous"></script>
+<style>
+  :root{
+    --bg:#f6f7f9; --card:#fff; --ink:#1c2333; --muted:#6b7280; --line:#eceef1;
+    --accent:#4f46e5; --accent-soft:#eef0fe; --ok:#0f9d58; --warn:#c2410c; --final:#b91c1c;
+    --s:#7c3aed; --a:#2563eb; --b:#0891b2; --c:#64748b; --d:#94a3b8; --f:#cbd5e1;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:transparent;color:var(--ink);font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  .wrap{max-width:1080px;margin:0 auto;padding:4px 16px 40px}
+  h1{font-size:22px;margin:8px 0 2px;letter-spacing:-.01em}
+  .sub{color:var(--muted);font-size:13px;margin:0 0 16px}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:18px}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+  .stat .n{font-size:26px;font-weight:700;letter-spacing:-.02em}
+  .stat .l{color:var(--muted);font-size:12px;margin-top:2px}
+  .stat .sub2{color:var(--muted);font-size:11px;margin-top:6px}
+  .grid{display:grid;grid-template-columns:1.3fr 1fr;gap:16px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 18px;margin-bottom:16px}
+  .card h2{font-size:14px;margin:0 0 12px;display:flex;align-items:center;gap:8px;text-transform:uppercase;letter-spacing:.04em;color:#374151}
+  .pill{background:var(--accent-soft);color:var(--accent);border-radius:999px;font-size:11px;font-weight:600;padding:2px 9px}
+  .next-row{display:flex;align-items:center;gap:12px;padding:10px 0;border-top:1px solid var(--line)}
+  .next-row:first-of-type{border-top:0}
+  .when{width:44px;text-align:center;flex:none}
+  .when .d{font-size:19px;font-weight:700;line-height:1}
+  .when .m{font-size:11px;color:var(--muted);text-transform:uppercase}
+  .ph{width:38px;height:54px;border-radius:6px;background:linear-gradient(135deg,#e9ecf3,#dfe3ec);display:flex;align-items:center;justify-content:center;font-weight:700;color:#8a93a6;flex:none}
+  .what{flex:1;min-width:0}
+  .what .ttl{font-weight:600}
+  .what .ttl a{color:inherit;text-decoration:none}
+  .what .ttl a:hover{text-decoration:underline}
+  .what .meta{color:var(--muted);font-size:12px}
+  .cd{color:var(--muted);font-size:12px;white-space:nowrap;flex:none}
+  .cd.soon{color:var(--warn);font-weight:600}
+  ul.list{list-style:none;margin:0;padding:0}
+  ul.list li{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-top:1px solid var(--line)}
+  ul.list li:first-child{border-top:0}
+  .vt{color:var(--muted);font-size:12px;white-space:nowrap}
+  .tag{font-size:10px;font-weight:700;padding:1px 6px;border-radius:5px;margin-left:6px;vertical-align:middle}
+  .tag.final{background:#fee2e2;color:var(--final)}
+  .tag.behind{background:#fff2e5;color:var(--warn)}
+  .chartbox{height:180px}
+  .tierhdr{font-size:11px;font-weight:700;letter-spacing:.05em;color:var(--muted);margin:12px 0 6px;text-transform:uppercase}
+  .tier{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-top:1px solid var(--line)}
+  .tbadge{width:22px;height:22px;border-radius:6px;color:#fff;font-weight:700;font-size:12px;display:flex;align-items:center;justify-content:center;flex:none}
+  .t-S{background:var(--s)}.t-A{background:var(--a)}.t-B{background:var(--b)}.t-C{background:var(--c)}.t-D{background:var(--d)}.t-F{background:var(--f)}
+  .pbody .pt{font-weight:600}
+  .pbody .pt a{color:inherit;text-decoration:none}
+  .pbody .pm{color:var(--muted);font-size:12px}
+  .pbody .pw{font-size:12.5px;margin-top:2px}
+  .bar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:14px}
+  .btn{background:var(--accent);color:#fff;border:0;border-radius:10px;padding:9px 15px;font-weight:600;font-size:13px;cursor:pointer}
+  .btn:disabled{opacity:.6;cursor:default}
+  .status{font-size:12px;color:var(--muted)}
+  .status.ok{color:var(--ok)}.status.err{color:var(--final)}
+  .muted{color:var(--muted)}
+  .foot{color:var(--muted);font-size:12px;margin-top:18px;border-top:1px solid var(--line);padding-top:12px}
+  .foot a{color:var(--accent);text-decoration:none}
+  @media(max-width:820px){.grid{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Manga Maintenance</h1>
+  <p class="sub" id="sub">Loading your collection…</p>
+
+  <div class="bar">
+    <button class="btn" id="updateBtn">Run maintenance now</button>
+    <span class="status" id="actionStatus">Re-checks release dates, updates the database on GitHub, and syncs your calendar.</span>
+  </div>
+
+  <div class="stats" id="stats"></div>
+
+  <div class="grid">
+    <div>
+      <div class="card">
+        <h2>Next up <span class="pill" id="nextPill" style="display:none"></span></h2>
+        <div id="nextUp"><div class="muted">Loading…</div></div>
+      </div>
+      <div class="card">
+        <h2>Releases by month</h2>
+        <div class="chartbox"><canvas id="chart"></canvas></div>
+      </div>
+      <div class="card" id="picksCard" style="display:none">
+        <h2>New-release picks <span class="pill" id="picksPill"></span></h2>
+        <div id="picks"></div>
+        <div class="foot" id="picksFoot" style="border:0;padding:0;margin-top:12px"></div>
+      </div>
+    </div>
+    <div>
+      <div class="card">
+        <h2>Awaiting a date <span class="pill" id="tbdPill">0</span></h2>
+        <ul class="list" id="tbdList"></ul>
+      </div>
+      <div class="card">
+        <h2>Final volumes <span class="pill" id="finPill">0</span></h2>
+        <ul class="list" id="finList"></ul>
+      </div>
+      <div class="card">
+        <h2>Most behind <span class="pill" id="behindPill">0</span></h2>
+        <ul class="list" id="behindList"></ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot" id="foot"></div>
+</div>
+
+<script>
+const DATA=/*__DATA__*/[];
+const PICKS=/*__PICKS__*/null;
+const BUILT="/*__BUILT__*/";
+const SITE="https://dobriencodes.github.io/manga/";
+const MONTHS=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const TIER_LABELS={S:"S · must-grab",A:"A · strong fit",B:"B · worth a look",C:"C · only if curious",D:"D · not your lane",F:"F · hard pass"};
+
+function esc(s){return (s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");}
+function initial(t){var m=(t||"").replace(/^The\s+/i,"").match(/[A-Za-z0-9]/);return m?m[0].toUpperCase():"?";}
+function bn(t){return "https://www.barnesandnoble.com/s/"+encodeURIComponent(t.replace(/\s+—.*/,""));}
+function isKeepsake(x){return (x.ownerStatus||"")==="Keepsake"||x.gap===null&&!(x.nextVol||"");}
+function parseNext(nv){ // returns {date:Date|null, iso:string|null, tbd:bool, label:string, final:bool}
+  nv=nv||""; if(!nv) return {date:null,iso:null,tbd:false,label:"",final:false};
+  var parts=nv.split("—"); var head=(parts[0]||"").trim(); var label=parts.slice(1).join("—").trim();
+  var tbd=/^TBD/i.test(head); var iso=null,date=null;
+  var m=head.match(/(\d{4})-(\d{2})-(\d{2})/);
+  if(m){iso=m[0]; date=new Date(m[0]+"T12:00:00");}
+  return {date:date,iso:iso,tbd:tbd,label:label,final:/FINAL/i.test(nv)};
+}
+function humanDate(d){return MONTHS[d.getMonth()]+" "+d.getDate()+", "+d.getFullYear();}
+
+function render(data,picks){
+  var today=new Date(); today.setHours(0,0,0,0);
+  var total=data.length;
+  var upcoming=[],passed=[],tbd=[],finals=[],behind=[];
+  data.forEach(function(x){
+    if(x.donate===true) return;
+    var p=parseNext(x.nextVol);
+    if(p.tbd){ tbd.push({t:x.title,v:p.label.replace(/\s*\(FINAL\)/i,""),fin:p.final}); }
+    if(p.final){ finals.push({t:x.title,v:p.label.replace(/\s*\(FINAL\)/i,""),d:p.tbd?"TBD":(p.date?humanDate(p.date):"TBD")}); }
+    if(p.date){
+      var rec={t:x.title,label:p.label,date:p.date,iso:p.iso,fin:p.final};
+      if(p.date>=today) upcoming.push(rec); else passed.push(rec);
+    }
+    if(x.gap!==null&&x.gap!==undefined&&!isKeepsake(x)){
+      var g=parseInt(x.gap,10); if(!isNaN(g)&&g>0) behind.push({t:x.title,g:g,owned:x.owned,en:x.enVols,jp:x.jpVols});
+    }
+  });
+  upcoming.sort(function(a,b){return a.date-b.date;});
+  behind.sort(function(a,b){return b.g-a.g;});
+
+  // stats
+  var nextRec=upcoming[0];
+  var nextTxt=nextRec?(MONTHS[nextRec.date.getMonth()]+" "+nextRec.date.getDate()):"—";
+  var nextSub=nextRec?(nextRec.t+" · "+countdown(nextRec.date,today)):"nothing scheduled";
+  var thisMonthCount=upcoming.filter(function(r){return r.date.getMonth()===today.getMonth()&&r.date.getFullYear()===today.getFullYear();}).length;
+  document.getElementById("stats").innerHTML=[
+    stat(total,"series tracked",""),
+    stat(nextTxt,"next release",esc(nextSub)),
+    stat(upcoming.length,"upcoming",passed.length?(passed.length+" past — confirm owned"):"with firm dates"),
+    stat(tbd.length,"awaiting a date",finals.length+" final volume"+(finals.length===1?"":"s"))
+  ].join("");
+
+  // next up
+  var pill=document.getElementById("nextPill");
+  if(upcoming.length){pill.style.display="inline-block";pill.textContent=Math.min(3,upcoming.length)+" soonest";}
+  document.getElementById("nextUp").innerHTML = upcoming.length? upcoming.slice(0,4).map(function(r){
+    var dd=Math.round((r.date-today)/864e5); var cd=dd<=0?"today":(dd===1?"tomorrow":dd+" days");
+    var series=r.t, vol=r.label;
+    return '<div class="next-row"><div class="ph">'+esc(initial(series))+'</div>'+
+      '<div class="when"><div class="d">'+r.date.getDate()+'</div><div class="m">'+MONTHS[r.date.getMonth()]+'</div></div>'+
+      '<div class="what"><div class="ttl"><a href="'+esc(bn(series))+'" target="_blank" rel="noopener">'+esc(series)+' — '+esc(vol)+'</a>'+(r.fin?'<span class="tag final">FINAL</span>':'')+'</div>'+
+      '<div class="meta"><a href="'+esc(bn(series))+'" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none">Barnes &amp; Noble ↗</a></div></div>'+
+      '<div class="cd'+(dd<=14?' soon':'')+'">'+cd+'</div></div>';
+  }).join("") : '<div class="muted">No upcoming releases with a firm date.</div>';
+
+  // chart
+  var bm={}; upcoming.forEach(function(r){var k=r.date.getFullYear()+"-"+String(r.date.getMonth()+1).padStart(2,"0");bm[k]=(bm[k]||0)+1;});
+  var labels=Object.keys(bm).sort().slice(0,12);
+  var disp=labels.map(function(k){var p=k.split("-");return MONTHS[parseInt(p[1],10)-1]+" "+p[0].slice(2);});
+  try{ if(window._chart)window._chart.destroy();
+    window._chart=new Chart(document.getElementById("chart"),{type:"bar",
+      data:{labels:disp,datasets:[{data:labels.map(function(k){return bm[k];}),backgroundColor:"#4f46e5",borderRadius:6,maxBarThickness:44}]},
+      options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:function(c){return c.parsed.y+(c.parsed.y===1?" release":" releases");}}}},
+        scales:{y:{beginAtZero:true,ticks:{precision:0,stepSize:1},grid:{color:"#eef0f3"}},x:{grid:{display:false}}}}});
+  }catch(e){}
+
+  // tbd
+  document.getElementById("tbdPill").textContent=tbd.length;
+  document.getElementById("tbdList").innerHTML= tbd.length? tbd.map(function(x){return '<li><span>'+esc(x.t)+(x.fin?'<span class="tag final">FINAL</span>':'')+'</span><span class="vt">'+esc(x.v)+'</span></li>';}).join("") : '<li class="muted">Everything upcoming has a date.</li>';
+
+  // finals
+  document.getElementById("finPill").textContent=finals.length;
+  document.getElementById("finList").innerHTML= finals.length? finals.map(function(x){return '<li><span>'+esc(x.t)+'</span><span class="vt">'+esc(x.v)+' · '+esc(x.d)+'</span></li>';}).join("") : '<li class="muted">No final volumes on deck.</li>';
+
+  // behind
+  document.getElementById("behindPill").textContent=behind.length;
+  document.getElementById("behindList").innerHTML= behind.slice(0,10).map(function(x){return '<li><span>'+esc(x.t)+'<span class="tag behind">gap '+x.g+'</span></span><span class="vt">'+esc((x.en||"?"))+' / '+esc((x.jp||"?"))+'</span></li>';}).join("");
+
+  // picks
+  if(picks&&picks.items&&picks.items.length){
+    var order=["S","A","B","C","D","F"]; var by={}; picks.items.forEach(function(p){(by[p.tier]=by[p.tier]||[]).push(p);});
+    var html=""; order.forEach(function(t){ if(!by[t])return; html+='<div class="tierhdr">'+esc(TIER_LABELS[t]||t)+'</div>';
+      by[t].forEach(function(p){ html+='<div class="tier"><div class="tbadge t-'+t+'">'+t+'</div>'+
+        '<div class="pbody"><div class="pt"><a href="'+esc(p.url||bn(p.t))+'" target="_blank" rel="noopener">'+esc(p.t)+'</a></div>'+
+        '<div class="pm">'+esc(p.meta||"")+'</div><div class="pw">'+esc(p.why||"")+'</div></div></div>'; }); });
+    document.getElementById("picks").innerHTML=html;
+    document.getElementById("picksPill").textContent=picks.items.length;
+    document.getElementById("picksFoot").innerHTML=picks.note?esc(picks.note):"";
+    document.getElementById("picksCard").style.display="block";
+  }
+
+  document.getElementById("sub").textContent="Tracking "+total+" series · data as of "+(BUILT||"the last maintenance run");
+  document.getElementById("foot").innerHTML='Snapshot, upcoming releases, and gaps reflect <a href="'+SITE+'" target="_blank" rel="noopener">your data.json</a> as of the last maintenance run ('+esc(BUILT||"")+'). The dashboard is rebuilt every Wednesday and whenever you press "Run maintenance now"; new-release picks refresh on the 1st of each month.';
+}
+function stat(n,l,sub){return '<div class="stat"><div class="n">'+esc(String(n))+'</div><div class="l">'+esc(l)+'</div>'+(sub?'<div class="sub2">'+sub+'</div>':'')+'</div>';}
+function countdown(d,today){var dd=Math.round((d-today)/864e5);return dd<=0?"today":(dd===1?"tomorrow":"in "+dd+" days");}
+
+function setStatus(m,c){var el=document.getElementById("actionStatus");el.textContent=m;el.className="status"+(c?" "+c:"");}
+document.getElementById("updateBtn").addEventListener("click",function(){
+  var btn=this;
+  if(!(window.cowork&&cowork.runScheduledTask)){setStatus("Open this inside Cowork to run maintenance.","err");return;}
+  if(!confirm("Run maintenance now? Re-checks release dates, updates the database on GitHub, and syncs your calendar. Runs in the background.")) return;
+  var o=btn.textContent; btn.disabled=true; btn.textContent="Starting…"; setStatus("Maintenance starting in the background…");
+  Promise.resolve(cowork.runScheduledTask("manga-maintenance"))
+    .then(function(){setStatus("Started. Runs in the background — reload this view in a few minutes to see updates.","ok");})
+    .catch(function(e){setStatus("Failed to start: "+(e&&e.message?e.message:e),"err");})
+    .finally(function(){setTimeout(function(){btn.disabled=false;btn.textContent=o;},1500);});
+});
+
+document.addEventListener("DOMContentLoaded",function(){
+  try{ render(DATA,PICKS); }
+  catch(e){ document.getElementById("sub").textContent="Render error: "+(e&&e.message?e.message:e); }
+});
+</script>
+</body>
+</html>
