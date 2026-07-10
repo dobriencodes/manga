@@ -1285,5 +1285,20 @@
     "verified": "2026-07-09",
     "jpVols": "9+",
     "nextVol": "2026-12-22 — Vol. 8"
+  },
+  {
+    "title": "The Apothecary Diaries",
+    "owner": "cat",
+    "owned": "1–15",
+    "ownerStatus": "Partial run",
+    "jpStatus": "Ongoing",
+    "enStatus": "Caught Up",
+    "enVols": "15",
+    "notes": "Square Enix; art by Nekokurage, story Natsu Hyuuga; ongoing. Cat's collection.",
+    "donate": false,
+    "gap": "1",
+    "verified": "2026-07-10",
+    "jpVols": "16+",
+    "nextVol": ""
   }
 ]
