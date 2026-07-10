@@ -116,6 +116,12 @@ tr:last-child td { border-bottom:none; }
 ::-webkit-scrollbar { width:5px; height:5px; }
 ::-webkit-scrollbar-track { background:var(--paper2); }
 ::-webkit-scrollbar-thumb { background:var(--rule2); border-radius:2px; }
+
+/* two-collector: owner tags for the Both view */
+.owner-chip { font-family:'IBM Plex Mono',monospace; font-size:8.5px; font-weight:500; letter-spacing:.08em; text-transform:uppercase; padding:1px 5px; border-radius:2px; border:1px solid currentColor; margin-right:6px; vertical-align:middle; white-space:nowrap; }
+.oc-dan  { color:#1e3d6e; background:#edf1f8; }
+.oc-cat  { color:#8b1a6e; background:#f8edf4; }
+.oc-both { color:#7a4a08; background:#fdf3e3; }
 </style>
 </head>
 <body>
@@ -128,6 +134,13 @@ tr:last-child td { border-bottom:none; }
 <div class="stats-strip" id="stats"></div>
 
 <div class="toolbar">
+  <div class="fg">
+    <span class="fl">View</span>
+    <button class="fc radio on" id="pv-dan">Dan</button>
+    <button class="fc radio"    id="pv-cat">Cat</button>
+    <button class="fc radio"    id="pv-both">Both</button>
+  </div>
+  <span class="tb-sep"></span>
   <div class="srch"><input type="text" id="search" placeholder="Search…" oninput="render()"></div>
   <div class="fg">
     <span class="fl">JP</span>
@@ -307,11 +320,36 @@ function stampVerified(title){
 
 // Filter state — plain JS objects, no DOM reading
 const F = {
+  person: 'dan',
   jp:    new Set(['Complete','Ongoing','Hiatus']),
   en:    new Set(['Collected','Caught Up','Behind','Catching Up']),
   owner: new Set(['Complete set','Partial run','Single volume','Keepsake','Not owned']),
   donate: 'all'
 };
+
+function ownerOf(r){ return (r.owner||'dan'); }
+function ownerName(o){ return o==='cat'?'Cat':'Dan'; }
+function ownerChip(o){ const cls=o==='cat'?'oc-cat':'oc-dan'; return `<span class="owner-chip ${cls}">${ownerName(o)}</span>`; }
+
+function personScope(){
+  return F.person==='both' ? ALL.slice() : ALL.filter(r=>ownerOf(r)===F.person);
+}
+
+// In the Both view, collapse a title owned by more than one person into a single row.
+function mergeShared(rows){
+  const byTitle={}, order=[];
+  rows.forEach(r=>{ if(!(r.title in byTitle)){ byTitle[r.title]=[]; order.push(r.title); } byTitle[r.title].push(r); });
+  return order.map(t=>{
+    const g=byTitle[t];
+    if(g.length===1) return Object.assign({},g[0],{_owners:[ownerOf(g[0])]});
+    // shared title: base the shared columns on the most-complete run, show both owned ranges
+    const g2=g.slice().sort((a,b)=>((progress(b)??-1)-(progress(a)??-1)));
+    const base=Object.assign({},g2[0]);
+    base._owners=g.map(ownerOf);
+    base._ownedCombined=g.map(x=>`${ownerName(ownerOf(x))} ${x.owned||'—'}`).join('  ·  ');
+    return base;
+  });
+}
 
 function setupChips() {
   // Toggle chips (multi-select)
@@ -348,12 +386,22 @@ function setupChips() {
       render();
     });
   });
+  // Person view (single-select): Dan / Cat / Both
+  ['pv-dan','pv-cat','pv-both'].forEach(id => {
+    document.getElementById(id).addEventListener('click', function() {
+      F.person = id.slice(3);
+      document.querySelectorAll('#pv-dan,#pv-cat,#pv-both').forEach(b => b.classList.remove('on'));
+      this.classList.add('on');
+      render();
+    });
+  });
 }
 
 function render(){
   const q=document.getElementById('search').value.toLowerCase();
 
-  let rows=ALL.filter(r=>{
+  const scope=personScope();
+  let rows=scope.filter(r=>{
     if(q&&!r.title.toLowerCase().includes(q)) return false;
     if(F.jp.size>0    && !F.jp.has(r.jpStatus))    return false;
     if(F.en.size>0    && !F.en.has(r.enStatus))     return false;
@@ -362,6 +410,7 @@ function render(){
     if(F.donate==='no'  &&  r.donate)  return false;
     return true;
   });
+  if(F.person==='both') rows=mergeShared(rows);
 
   rows.sort((a,b)=>{
     let av=a[sortCol]??'',bv=b[sortCol]??'';
@@ -393,7 +442,7 @@ function render(){
 
   if(!rows.length){
     tbody.innerHTML=`<tr><td colspan="${1+COLS.filter(c=>vis[c]).length}" class="empty">No results.</td></tr>`;
-    updateStats(rows); return;
+    updateStats(scope,0); return;
   }
 
   tbody.innerHTML=rows.map(r=>{
@@ -411,10 +460,19 @@ function render(){
     const verDate=r.verified?r.verified.slice(5):'—';
     const verHtml=`<span class="c-verified">${verDate}</span><button class="verify-btn" onclick="stampVerified('${safeTitle}');event.stopPropagation()" title="Mark verified today">✓</button>`;
 
+    const ownerTag=(F.person==='both')
+      ? ((r._owners&&r._owners.length>1)
+          ? `<span class="owner-chip oc-both">${r._owners.map(ownerName).join('+')}</span>`
+          : ownerChip(ownerOf(r)))
+      : '';
+    const ownedCell=r._ownedCombined
+      ? `<span class="c-mono">${r._ownedCombined}</span>`
+      : `<div class="owned-wrap">${ownStamp(r)}</div>`;
+
     return `<tr class="${rowCls}">
-      <td class="${titleCls}" title="${r.title}">${titlePrefix}${r.title}</td>
+      <td class="${titleCls}" title="${r.title}">${ownerTag}${titlePrefix}${r.title}</td>
       ${vis.prog?`<td style="padding:0 8px">${p!=null?`<div class="prog" style="width:36px"><div class="prog-fill" style="width:${Math.round(p*100)}%;background:${progColor(p)}"></div></div>`:'<span class="c-faint">—</span>'}</td>`:''}
-      ${vis.owned?`<td><div class="owned-wrap">${ownStamp(r)}</div></td>`:''}
+      ${vis.owned?`<td>${ownedCell}</td>`:''}
       ${vis.enVols?`<td class="c-mono">${r.enVols||'—'}</td>`:''}
       ${vis.jpVols?`<td class="c-faint">${r.jpVols||'—'}</td>`:''}
       ${vis.jpStatus?`<td class="ov">${jpStamp(r.jpStatus)}</td>`:''}
@@ -427,27 +485,28 @@ function render(){
     </tr>`;
   }).join('');
 
-  updateStats(rows);
+  updateStats(scope,rows.length);
 }
 
-function updateStats(rows){
-  const don=ALL.filter(r=>r.donate).length;
-  const caughtUp=ALL.filter(r=>r.enStatus==='Caught Up').length;
-  const totalGap=ALL.reduce((s,r)=>s+(!r.donate&&r.ownerStatus!=='Keepsake'&&r.gap&&r.gap!=='null'?parseInt(r.gap)||0:0),0);
+function updateStats(scope,shown){
+  const don=scope.filter(r=>r.donate).length;
+  const caughtUp=scope.filter(r=>r.enStatus==='Caught Up').length;
+  const totalGap=scope.reduce((s,r)=>s+(!r.donate&&r.ownerStatus!=='Keepsake'&&r.gap&&r.gap!=='null'?parseInt(r.gap)||0:0),0);
 
   document.getElementById('stats').innerHTML=[
-    ['Series',ALL.length],
-    ['Showing',rows.length],
-    ['JP Complete',ALL.filter(r=>r.jpStatus==='Complete').length],
-    ['JP Ongoing',ALL.filter(r=>r.jpStatus==='Ongoing').length],
-    ['EN Collected',ALL.filter(r=>r.enStatus==='Collected').length],
+    ['Series',scope.length],
+    ['Showing',shown],
+    ['JP Complete',scope.filter(r=>r.jpStatus==='Complete').length],
+    ['JP Ongoing',scope.filter(r=>r.jpStatus==='Ongoing').length],
+    ['EN Collected',scope.filter(r=>r.enStatus==='Collected').length],
     ['Caught Up',caughtUp],
-    ['EN Behind',ALL.filter(r=>r.enStatus==='Behind').length],
+    ['EN Behind',scope.filter(r=>r.enStatus==='Behind').length],
     ['Vols Missing',totalGap],
     ['To Donate',don],
   ].map(([k,v])=>`<div class="stat"><div class="stat-val">${v}</div><div class="stat-key">${k}</div></div>`).join('');
 
-  document.getElementById('hdr-meta').textContent=`${ALL.length} series`;
+  const who=F.person==='both'?'Dan + Cat':(F.person==='cat'?'Cat':'Dan');
+  document.getElementById('hdr-meta').textContent=`${who} · ${scope.length} series`;
 }
 
 async function boot(){
