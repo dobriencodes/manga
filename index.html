@@ -16,6 +16,8 @@
   --paper3:    #ece5d8;
   --rule:      #e0d8cc;
   --rule2:     #c8bfb0;
+  --header-bg: #1a1410;
+  --accent:    #4a3f35; --accent-bg: #ece5d8;
 
   --jp-complete:  #2a5c2a; --jp-complete-bg:  #eef5ee;
   --jp-ongoing:   #1e3d6e; --jp-ongoing-bg:   #edf1f8;
@@ -34,13 +36,13 @@
 *, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
 body { font-family:'Source Serif 4',Georgia,serif; background:var(--paper); color:var(--ink); font-size:13px; line-height:1.5; }
 
-.page-header { background:var(--ink); color:var(--paper); padding:18px 24px 14px; display:flex; align-items:baseline; gap:16px; border-bottom:3px solid var(--ink-mid); }
+.page-header { background:var(--header-bg); color:var(--paper); padding:18px 24px 14px; display:flex; align-items:baseline; gap:16px; border-bottom:3px solid var(--accent); transition:background .25s, border-color .25s; }
 .page-header h1 { font-family:'Playfair Display',serif; font-size:1.55rem; font-weight:700; line-height:1; flex-shrink:0; }
 .page-header .meta { font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--ink-faint); letter-spacing:.1em; text-transform:uppercase; }
 
 .stats-strip { background:var(--paper2); border-bottom:2px solid var(--ink); display:flex; overflow-x:auto; }
 .stat { padding:8px 18px; border-right:1px solid var(--rule2); flex-shrink:0; text-align:center; }
-.stat-val { font-family:'Playfair Display',serif; font-size:1.45rem; font-weight:700; line-height:1; }
+.stat-val { font-family:'Playfair Display',serif; font-size:1.45rem; font-weight:700; line-height:1; color:var(--accent); }
 .stat-key { font-family:'IBM Plex Mono',monospace; font-size:9px; text-transform:uppercase; letter-spacing:.1em; color:var(--ink-light); margin-top:2px; }
 
 .toolbar { background:var(--paper); border-bottom:1px solid var(--rule2); padding:9px 18px; display:flex; gap:7px; flex-wrap:wrap; align-items:center; position:sticky; top:0; z-index:50; box-shadow:0 1px 0 var(--rule), 0 3px 8px rgba(0,0,0,.04); }
@@ -122,6 +124,13 @@ tr:last-child td { border-bottom:none; }
 .oc-dan  { color:#1e3d6e; background:#edf1f8; }
 .oc-cat  { color:#8b1a6e; background:#f8edf4; }
 .oc-both { color:#7a4a08; background:#fdf3e3; }
+
+/* per-view color palettes — Dan (cool blue), Cat (rose), Both (warm sepia) */
+body { transition:background .25s; }
+body.view-dan  { --header-bg:#17233f; --paper:#f6f8fc; --paper2:#eaf0f9; --paper3:#dfe8f5; --rule:#dbe4f0; --rule2:#bcccdf; --accent:#1e3d6e; --accent-bg:#e7eef8; }
+body.view-cat  { --header-bg:#3a1730; --paper:#fdf6fb; --paper2:#f8ebf3; --paper3:#f1dfeb; --rule:#f0dfe9; --rule2:#dcc0d1; --accent:#8b1a6e; --accent-bg:#f8ecf4; }
+body.view-both { --header-bg:#2a2015; --paper:#faf7f1; --paper2:#f3ecdf; --paper3:#ece2d2; --rule:#e6ddcd; --rule2:#ccbfa8; --accent:#7a4a08; --accent-bg:#fdf3e3; }
+#pv-dan.on, #pv-cat.on, #pv-both.on { border-color:var(--accent); background:var(--accent-bg); color:var(--accent); }
 </style>
 </head>
 <body>
@@ -398,6 +407,7 @@ function setupChips() {
 }
 
 function render(){
+  document.body.className='view-'+F.person;
   const q=document.getElementById('search').value.toLowerCase();
 
   const scope=personScope();
