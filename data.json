@@ -1289,14 +1289,14 @@
   {
     "title": "The Apothecary Diaries",
     "owner": "cat",
-    "owned": "1–14",
+    "owned": "1–15",
     "ownerStatus": "Partial run",
     "jpStatus": "Ongoing",
     "enStatus": "Caught Up",
     "enVols": "15",
     "notes": "Square Enix; art by Nekokurage, story Natsu Hyuuga; ongoing. Cat's collection.",
     "donate": false,
-    "gap": 2,
+    "gap": 1,
     "verified": "2026-07-10",
     "jpVols": "16+",
     "nextVol": ""
