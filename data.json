@@ -1495,5 +1495,20 @@
     "gap": 4,
     "donate": false,
     "verified": "2026-08-26"
+  },
+  {
+    "title": "Sweat and Soap",
+    "owner": "cat",
+    "owned": "1",
+    "ownerStatus": "Partial run",
+    "jpStatus": "Complete",
+    "enStatus": "Catching Up",
+    "enVols": "11",
+    "jpVols": "11",
+    "nextVol": "",
+    "notes": "Kodansha; complete at 11 vols; office romance",
+    "gap": 10,
+    "donate": false,
+    "verified": "2026-08-26"
   }
 ]
