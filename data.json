@@ -90,12 +90,12 @@
     "ownerStatus": "Partial run",
     "jpStatus": "Ongoing",
     "enStatus": "Behind",
-    "enVols": "31",
+    "enVols": "33",
     "jpVols": "39+",
-    "nextVol": "2026-07-21 — Vol. 32",
+    "nextVol": "TBD — Vol. 34",
     "notes": "Kodansha; has 2× vol 1 (B&N exclusive keepsake + regular copy)",
     "donate": false,
-    "gap": "30",
+    "gap": 31,
     "verified": "2026-08-19"
   },
   {
@@ -1016,12 +1016,12 @@
     "ownerStatus": "Single volume",
     "jpStatus": "Ongoing",
     "enStatus": "Behind",
-    "enVols": "19",
+    "enVols": "20",
     "jpVols": "23+",
-    "nextVol": "2026-08-11 — Vol. 20",
+    "nextVol": "2026-10-06 — Vol. 21",
     "notes": "VIZ",
     "donate": false,
-    "gap": 18,
+    "gap": 19,
     "verified": "2026-08-19"
   },
   {
