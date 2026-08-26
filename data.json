@@ -633,7 +633,7 @@
     "jpVols": "6",
     "nextVol": "TBD — Vol. 5",
     "notes": "Seven Seas; complete at 6 JP vols (Jan 2025)",
-    "donate": false,
+    "donate": true,
     "gap": 0,
     "verified": "2026-08-19"
   },
@@ -950,7 +950,7 @@
     "jpVols": "9",
     "nextVol": "2026-10-27 — Vol. 9",
     "notes": "Seven Seas; complete at 9 JP vols (Nov 2025)",
-    "donate": false,
+    "donate": true,
     "gap": 0,
     "verified": "2026-08-19"
   },
