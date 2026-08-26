@@ -15,11 +15,11 @@
   {
     "title": "Akane-Banashi",
     "owner": "dan",
-    "owned": "1–18",
+    "owned": "1–17",
     "ownerStatus": "Partial run",
     "jpStatus": "Ongoing",
     "enStatus": "Caught Up",
-    "enVols": "18",
+    "enVols": "17",
     "jpVols": "21+",
     "nextVol": "TBD — Vol. 19",
     "notes": "VIZ; anime Spring 2026 on Netflix",
@@ -496,16 +496,16 @@
   {
     "title": "Kaiju No. 8",
     "owner": "dan",
-    "owned": "1–15",
-    "ownerStatus": "Partial run",
+    "owned": "1–16",
+    "ownerStatus": "Complete set",
     "jpStatus": "Complete",
-    "enStatus": "Caught Up",
-    "enVols": "15",
+    "enStatus": "Collected",
+    "enVols": "16",
     "jpVols": "16",
-    "nextVol": "2026-09-01 — Vol. 16 (FINAL)",
-    "notes": "VIZ; ended Jul 2025; complete at 16",
+    "nextVol": "",
+    "notes": "VIZ; complete at 16; FINAL vol Sep 1 2026",
     "donate": false,
-    "gap": "0",
+    "gap": 0,
     "verified": "2026-08-19"
   },
   {
@@ -569,16 +569,16 @@
   {
     "title": "Miss Kobayashi's Dragon Maid",
     "owner": "dan",
-    "owned": "1–16",
+    "owned": "1–17",
     "ownerStatus": "Partial run",
     "jpStatus": "Ongoing",
-    "enStatus": "Collected",
-    "enVols": "16",
+    "enStatus": "Caught Up",
+    "enVols": "17",
     "jpVols": "17+",
-    "nextVol": "2026-09-01 — Vol. 17",
+    "nextVol": "TBD — Vol. 18",
     "notes": "Seven Seas",
     "donate": false,
-    "gap": "0",
+    "gap": 0,
     "verified": "2026-08-19"
   },
   {
@@ -725,16 +725,16 @@
   {
     "title": "Ruri Dragon",
     "owner": "dan",
-    "owned": "1–3",
+    "owned": "1–4",
     "ownerStatus": "Partial run",
     "jpStatus": "Ongoing",
-    "enStatus": "Collected",
-    "enVols": "3",
+    "enStatus": "Caught Up",
+    "enVols": "4",
     "jpVols": "4+",
-    "nextVol": "2026-09-01 — Vol. 4",
+    "nextVol": "TBD — Vol. 5",
     "notes": "VIZ",
     "donate": false,
-    "gap": "0",
+    "gap": 0,
     "verified": "2026-08-19"
   },
   {
@@ -1188,18 +1188,18 @@
   {
     "title": "Nana: 25th Anniversary Edition",
     "owner": "dan",
-    "owned": "Omnibus 1–4 (JP vols 1–8)",
+    "owned": "Omnibus 1–5 (JP vols 1–10)",
     "ownerStatus": "Partial run",
-    "enVols": "4",
+    "enVols": "5",
     "jpVols": "11",
     "jpStatus": "Hiatus",
     "enStatus": "Caught Up",
-    "nextVol": "2026-09-01 — Omnibus 5",
+    "nextVol": "TBD — Omnibus 6",
     "notes": "VIZ; 2-in-1 omnibus; 25th anniversary reprint; 11 total",
     "donate": false,
     "gap": 0,
     "verified": "2026-08-19",
-    "progOverride": "4"
+    "progOverride": "5"
   },
   {
     "title": "Chihayafuru: Bilingual Edition",
@@ -1300,5 +1300,20 @@
     "verified": "2026-07-10",
     "jpVols": "16+",
     "nextVol": ""
+  },
+  {
+    "title": "Witch Hat Atelier: Grimoire Edition",
+    "owner": "dan",
+    "owned": "Grimoire Ed. 1",
+    "ownerStatus": "Partial run",
+    "jpStatus": "Ongoing",
+    "enStatus": "Caught Up",
+    "enVols": "1",
+    "jpVols": "1",
+    "nextVol": "2026-09-22 — Grimoire Ed. 2 (vols 4–6)",
+    "notes": "Kodansha; deluxe 3-in-1 hardcover; gold foil covers; ~600pp each; Ed.1 (vols 1–3) May 5 2026; Ed.2 (vols 4–6) Sep 22 2026",
+    "gap": 0,
+    "donate": false,
+    "verified": "2026-08-26"
   }
 ]
