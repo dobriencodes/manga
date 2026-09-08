@@ -840,21 +840,6 @@
     "progOverride": "1"
   },
   {
-    "title": "Touring After the Apocalypse",
-    "owner": "dan",
-    "owned": "1–2",
-    "ownerStatus": "Partial run",
-    "jpStatus": "Ongoing",
-    "enStatus": "Behind",
-    "enVols": "7",
-    "jpVols": "8",
-    "nextVol": "TBD — Vol. 8",
-    "notes": "Yen Press; anime aired Oct–Dec 2025 on Crunchyroll; 8 JP vols as of Oct 2025",
-    "donate": false,
-    "gap": "5",
-    "verified": "2026-09-02"
-  },
-  {
     "title": "Trigun Deluxe Edition",
     "owner": "dan",
     "owned": "1 (complete)",
@@ -1510,5 +1495,21 @@
     "gap": 10,
     "donate": false,
     "verified": "2026-08-26"
+  },
+  {
+    "title": "Girls' Last Tour Collector's Edition",
+    "owner": "dan",
+    "owned": "Ration Pack 1 (vols 1–3)",
+    "ownerStatus": "Partial run",
+    "jpStatus": "Complete",
+    "enStatus": "Caught Up",
+    "enVols": "1",
+    "notes": "Yen Press deluxe 3-in-1 omnibus; 6 JP vols = 2 Ration Packs; 1st Ration Pack (vols 1–3) released Aug 25, 2026, 488pp, ISBN 9798855426915; 2nd Ration Pack not yet announced",
+    "nextVol": "TBD — 2nd Ration Pack (vols 4–6)",
+    "donate": false,
+    "gap": "0",
+    "verified": "2026-09-08",
+    "jpVols": "2",
+    "progOverride": "1"
   }
 ]
