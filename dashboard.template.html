@@ -123,7 +123,27 @@ const TIER_LABELS={S:"S · must-grab",A:"A · strong fit",B:"B · worth a look",
 function esc(s){return (s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");}
 function initial(t){var m=(t||"").replace(/^The\s+/i,"").match(/[A-Za-z0-9]/);return m?m[0].toUpperCase():"?";}
 function bn(t){return "https://www.barnesandnoble.com/s/"+encodeURIComponent(t.replace(/\s+—.*/,""));}
-function isKeepsake(x){return (x.ownerStatus||"")==="Keepsake"||x.gap===null&&!(x.nextVol||"");}
+function isKeepsake(x){return (x.ownerStatus||"")==="Keepsake";}
+// --- gap is DERIVED, never stored. gap = enVols - ownedCount, null for keepsakes. ---
+function ownedCount(r){
+  if(r.progOverride) return +r.progOverride;
+  var s=String(r.owned||'').replace(/\u2013/g,'-').replace(/\([^)]*\)/g,'');
+  if(!s.trim()) return 0;
+  var tot=0, re1=/(\d+)\s*-\s*(\d+)/g, m;
+  while((m=re1.exec(s))!==null) tot += (+m[2]) - (+m[1]) + 1;
+  var rest=s.replace(/\d+\s*-\s*\d+/g,''), re2=/\d+/g;
+  while((m=re2.exec(rest))!==null) if(+m[0]!==0) tot += 1;
+  return tot;
+}
+function gapOf(r){
+  if((r.ownerStatus||'')==='Keepsake') return null;
+  var t=String(r.enVols||'');
+  if(t.indexOf('bilingual')!==-1) return null;
+  var m=t.match(/^\s*(\d+)/);
+  if(!m) return null;
+  return Math.max(0, (+m[1]) - ownedCount(r));
+}
+
 function parseNext(nv){ // returns {date:Date|null, iso:string|null, tbd:bool, label:string, final:bool}
   nv=nv||""; if(!nv) return {date:null,iso:null,tbd:false,label:"",final:false};
   var parts=nv.split("—"); var head=(parts[0]||"").trim(); var label=parts.slice(1).join("—").trim();
@@ -147,9 +167,8 @@ function render(data,picks){
       var rec={t:x.title,label:p.label,date:p.date,iso:p.iso,fin:p.final};
       if(p.date>=today) upcoming.push(rec); else passed.push(rec);
     }
-    if(x.gap!==null&&x.gap!==undefined&&!isKeepsake(x)){
-      var g=parseInt(x.gap,10); if(!isNaN(g)&&g>0) behind.push({t:x.title,g:g,owned:x.owned,en:x.enVols,jp:x.jpVols});
-    }
+    var g=gapOf(x);
+    if(g!==null&&g>0) behind.push({t:x.title,g:g,owned:x.owned,en:x.enVols,jp:x.jpVols});
   });
   upcoming.sort(function(a,b){return a.date-b.date;});
   behind.sort(function(a,b){return b.g-a.g;});
