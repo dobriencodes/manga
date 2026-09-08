@@ -267,6 +267,26 @@ function ownStamp(r){
   return `<span class="stamp" style="color:${cl};background:${bg}">${label}</span>`;
 }
 
+// --- gap is DERIVED, never stored. gap = enVols - ownedCount, null for keepsakes. ---
+function ownedCount(r){
+  if(r.progOverride) return +r.progOverride;
+  var s=String(r.owned||'').replace(/\u2013/g,'-').replace(/\([^)]*\)/g,'');
+  if(!s.trim()) return 0;
+  var tot=0, re1=/(\d+)\s*-\s*(\d+)/g, m;
+  while((m=re1.exec(s))!==null) tot += (+m[2]) - (+m[1]) + 1;
+  var rest=s.replace(/\d+\s*-\s*\d+/g,''), re2=/\d+/g;
+  while((m=re2.exec(rest))!==null) if(+m[0]!==0) tot += 1;
+  return tot;
+}
+function gapOf(r){
+  if((r.ownerStatus||'')==='Keepsake') return null;
+  var t=String(r.enVols||'');
+  if(t.indexOf('bilingual')!==-1) return null;
+  var m=t.match(/^\s*(\d+)/);
+  if(!m) return null;
+  return Math.max(0, (+m[1]) - ownedCount(r));
+}
+
 function progress(r){
   const t=r.enVols||'';
   if(t.includes('bilingual')) return null;
@@ -430,7 +450,7 @@ function render(){
       if(!aE&&bE) return -1;
     }
     if(sortCol==='gap'){
-      av=parseFloat(av)||0; bv=parseFloat(bv)||0;
+      av=gapOf(a)??-1; bv=gapOf(b)??-1;
       return (av-bv)*sortDir;
     }
     if(sortCol==='prog'){
@@ -464,7 +484,7 @@ function render(){
     const safeTitle=r.title.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
 
     const isKeepsake=r.ownerStatus==='Keepsake';
-    const gapVal=(!isKeepsake&&r.gap!=null&&r.gap!=='null')?parseInt(r.gap):null;
+    const gapVal=gapOf(r);
     const gapHtml=isKeepsake?`<span class="c-faint">🔖</span>`:gapVal!=null?(gapVal===0?`<span class="c-gap zero">✓</span>`:`<span class="c-gap">−${gapVal}</span>`):`<span class="c-faint">—</span>`;
 
     const verDate=r.verified?r.verified.slice(5):'—';
@@ -501,7 +521,7 @@ function render(){
 function updateStats(scope,shown){
   const don=scope.filter(r=>r.donate).length;
   const caughtUp=scope.filter(r=>r.enStatus==='Caught Up').length;
-  const totalGap=scope.reduce((s,r)=>s+(!r.donate&&r.ownerStatus!=='Keepsake'&&r.gap&&r.gap!=='null'?parseInt(r.gap)||0:0),0);
+  const totalGap=scope.reduce((s,r)=>s+(!r.donate?(gapOf(r)||0):0),0);
 
   document.getElementById('stats').innerHTML=[
     ['Series',scope.length],
