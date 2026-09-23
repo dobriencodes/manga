@@ -1,32 +1,189 @@
 {
-  "date": "2026-08-01",
-  "range": "July – August 2026",
-  "note": "All debut-volume manga (no light novels) that released last month and this month per otakucalendar.com, ranked against your collection. Covers link to Barnes & Noble.",
+  "date": "2026-09-23",
+  "range": "August – September 2026",
+  "note": "Debut-volume manga (no light novels) from August and September 2026 that the August 1 picks did not cover, ranked against both collections. Links go to Barnes & Noble.",
   "items": [
-    {"tier":"S","t":"Girls' Last Tour Collector's Edition: 1st Ration Pack","meta":"Aug 25 · Yen Press · post-apocalyptic slice-of-life","why":"Tsukumizu's quiet, melancholy drifting is the same wavelength as March Comes in Like a Lion — and the 480-page deluxe HC is the version worth shelving.","url":"https://www.barnesandnoble.com/s/Girls%20Last%20Tour%20Collectors%20Edition"},
-    {"tier":"S","t":"Clevatess: The King of Dark Beasts, the Baby, and the Undead Hero, Vol. 1","meta":"Aug 25 · Yen Press · dark fantasy","why":"Yuji Iwahara draws grime and monster design like Dorohedoro's cousin; this is the artsy-seinen action debut of the window.","url":"https://www.barnesandnoble.com/s/Clevatess"},
-    {"tier":"S","t":"What Does the Fox Say?, Vol. 1","meta":"Aug 25 · Yen Press · yuri / office GL","why":"The landmark Korean GL workplace drama finally in print — the biggest yuri debut in this window by a wide margin.","url":"https://www.barnesandnoble.com/s/What%20Does%20the%20Fox%20Say"},
-    {"tier":"S","t":"Seeds of Anxiety*, Vol. 1","meta":"Jul 28 · Yen Press · horror (short-form)","why":"Masaaki Nakayama's Fuan no Tane is pure creeping dread with no explanation — exactly the register The Summer Hikaru Died works in.","url":"https://www.barnesandnoble.com/s/Seeds%20of%20Anxiety"},
-
-    {"tier":"A","t":"Blue Summer Haze, Vol. 1","meta":"Jul 7 · Kodansha · BL / baseball","why":"A battery love triangle — two catchers, one pitcher. Sports manga structure carrying the BL, which is how you judge the genre.","url":"https://www.barnesandnoble.com/s/Blue%20Summer%20Haze"},
-    {"tier":"A","t":"Deep-Sea Aquarium Magmell, Vol. 1","meta":"Aug 25 · Yen Press · seinen adventure","why":"Deep-sea creature rescue with real craft in the environmental art — the quiet-obsessive-profession lane you keep buying into.","url":"https://www.barnesandnoble.com/s/Deep%20Sea%20Aquarium%20Magmell"},
-    {"tier":"A","t":"Appleseed Deluxe Edition HC","meta":"Aug 11 · Dark Horse · cyberpunk seinen","why":"Masamune Shirow's foundational cyberpunk in a proper hardcover — a shelf anchor, not a casual read.","url":"https://www.barnesandnoble.com/s/Appleseed%20Deluxe%20Edition"},
-    {"tier":"A","t":"Daydream Darling, Vol. 1","meta":"Aug 4 · VIZ · shojo romance","why":"Io Sakisaka (Ao Haru Ride) is the strongest cartoonist launching a romance this window; VIZ is putting weight behind it.","url":"https://www.barnesandnoble.com/s/Daydream%20Darling"},
-
-    {"tier":"B","t":"Golden Man, Vol. 1","meta":"Aug 25 · Yen Press · superhero action","why":"Young Magazine superhero deconstruction that already has a confirmed 11-volume ending — a contained commitment.","url":"https://www.barnesandnoble.com/s/Golden%20Man%20manga"},
-    {"tier":"B","t":"Hand in Hand with Mu-chan: Lessons from My Autistic Daughter, Vol. 1","meta":"Aug 25 · Yen Press · autobiographical essay manga","why":"Nonfiction slice-of-life with real stakes; the contemplative lane next to Blue Period rather than the plot-driven one.","url":"https://www.barnesandnoble.com/s/Hand%20in%20Hand%20with%20Mu-chan"},
-    {"tier":"B","t":"Hima-Ten!, Vol. 1","meta":"Jul 7 · VIZ · slice-of-life romcom","why":"VIZ Jump romcom about killing time together — low-stakes hangout energy, Days on Fes adjacent.","url":"https://www.barnesandnoble.com/s/Hima-Ten"},
-    {"tier":"B","t":"You Might As Well Be the One, Vol. 1","meta":"Aug 11 · Kodansha · josei romance","why":"College-age romance about being misread by everyone; more grounded than the usual shojo debut.","url":"https://www.barnesandnoble.com/s/You%20Might%20As%20Well%20Be%20the%20One"},
-    {"tier":"B","t":"Don't Confuse Me, Yamori-kun, Vol. 1","meta":"Aug 25 · Yen Press · romcom","why":"Fresh Yen license in the teasing-romcom mold — pleasant, not essential.","url":"https://www.barnesandnoble.com/s/Dont%20Confuse%20Me%20Yamori-kun"},
-    {"tier":"B","t":"Liste Rouge, Vol. 1","meta":"Jul 28 · Yen Press · action thriller","why":"Stylish assassin thriller; worth a flip-through if the art grabs you the way Dorohedoro's did.","url":"https://www.barnesandnoble.com/s/Liste%20Rouge"},
-    {"tier":"B","t":"Castle in the Sky Film Comic: All-in-One Edition","meta":"Jul 28 · VIZ · Ghibli film comic","why":"Keepsake more than a read — the complete Laputa film comic in one volume for the first time.","url":"https://www.barnesandnoble.com/s/Castle%20in%20the%20Sky%20Film%20Comic%20All-in-One"},
-    {"tier":"B","t":"Seven Sundays, Vol. 1","meta":"Jul 21 · Ize Press · BL manhwa (full color)","why":"Full-color print of a well-reviewed BL webtoon; the story holds up on its own, which is your bar for the genre.","url":"https://www.barnesandnoble.com/s/Seven%20Sundays%20manhwa"},
-
-    {"tier":"C","t":"Beneath the Fur, Vol. 1","meta":"Jul 28 · Yen Press · romance drama","why":"Umi Ruike debut with an appealing hook, but nothing yet says it clears your shelf bar.","url":"https://www.barnesandnoble.com/s/Beneath%20the%20Fur"},
-    {"tier":"C","t":"Elden Ring: Distant Tales Between, Vol. 1","meta":"Aug 25 · Yen Press · game tie-in fantasy","why":"Side-story anthology from the Lands Between — only if the game means something to you.","url":"https://www.barnesandnoble.com/s/Elden%20Ring%20Distant%20Tales%20Between"},
-    {"tier":"C","t":"Luca the Dragon Vet, Vol. 1","meta":"Jul 28 · Kodansha · fantasy slice-of-life","why":"Cozy monster-vet procedural; charming, but a lighter read than most of what you keep.","url":"https://www.barnesandnoble.com/s/Luca%20the%20Dragon%20Vet"},
-    {"tier":"C","t":"Solo Leveling: Ragnarok, Vol. 1","meta":"Jul 21 · Yen Press · action manhwa","why":"Sequel-series debut for a huge franchise — fine action, but not the kind of book you shelve.","url":"https://www.barnesandnoble.com/s/Solo%20Leveling%20Ragnarok"},
-    {"tier":"C","t":"The Bubble Love of the Mermaid, Vol. 1 (manga)","meta":"Jul 28 · Yen Press · fantasy romance","why":"Manga adaptation of an Agitogi novel; pretty, but adaptation-of-a-novel is usually your skip signal.","url":"https://www.barnesandnoble.com/s/The%20Bubble%20Love%20of%20the%20Mermaid%20manga"},
-    {"tier":"D","t":"The Princess Groom, Vol. 1","meta":"Aug 4 · Square Enix (Manga UP!) · gender-swap romcom","why":"Isekai-adjacent fantasy romcom — squarely outside the lane you actually read.","url":"https://www.barnesandnoble.com/s/The%20Princess%20Groom"}
+    {
+      "tier": "S",
+      "t": "Sound of a Blink, Vol. 1",
+      "meta": "Sep 15 · VIZ · family drama",
+      "why": "Shuzo Oshimi (Blood on the Tracks, The Flowers of Evil) doing a brother's-diagnosis family drama. The closest new book to the Look Back and Summer Hikaru Died register.",
+      "url": "https://www.barnesandnoble.com/s/Sound%20of%20a%20Blink"
+    },
+    {
+      "tier": "S",
+      "t": "Half Is More, Vol. 1",
+      "meta": "Aug 18 · VIZ · josei drama",
+      "why": "Yoiko Fujimi's story of a mixed-race woman in Japan topped a 2026 manga ranking there. Grounded, adult, and the most talked-about debut of the window.",
+      "url": "https://www.barnesandnoble.com/s/Half%20Is%20More%20manga"
+    },
+    {
+      "tier": "S",
+      "t": "And Then There Were None, Vol. 1",
+      "meta": "Sep 15 · VIZ · mystery adaptation",
+      "why": "Aya Nikaido adapts the Agatha Christie novel. Squarely in Cat's historical mystery and literary adaptation lane, next to her Manga Classics.",
+      "url": "https://www.barnesandnoble.com/s/And%20Then%20There%20Were%20None%20Aya%20Nikaido"
+    },
+    {
+      "tier": "A",
+      "t": "LYNX, Vol. 1",
+      "meta": "Aug 11 · VIZ Originals · sapphic sci-fi noir",
+      "why": "A damaged detective and her cybernetic cat hunt killer angels. Noir action for you, GL for Cat, and an original VIZ series rather than a license.",
+      "url": "https://www.barnesandnoble.com/s/LYNX%20Sattin%20tokitokoro"
+    },
+    {
+      "tier": "A",
+      "t": "Gilded Seven Vol. 1",
+      "meta": "Sep 8 · Seven Seas · alternate-history Western",
+      "why": "Tasuku Karasuma (No Guns Life) in a Wild West where Lincoln survived. The series already ended in Japan, so it is a contained commitment.",
+      "url": "https://www.barnesandnoble.com/s/Gilded%20Seven"
+    },
+    {
+      "tier": "A",
+      "t": "What Six Survivors Told…, Vol. 1",
+      "meta": "Sep 22 · Yen Press · horror",
+      "why": "A zombie outbreak in a shopping mall, told through the survivors' accounts. The horror debut of the window.",
+      "url": "https://www.barnesandnoble.com/s/What%20Six%20Survivors%20Told"
+    },
+    {
+      "tier": "A",
+      "t": "Let's Go Nirvana!, Vol. 1",
+      "meta": "Sep 22 · Yen Press · yakuza thriller",
+      "why": "A low-level yakuza hides out as a Buddhist monk after a hitman wipes out his clan. Crime action with a comedic hook.",
+      "url": "https://www.barnesandnoble.com/s/Lets%20Go%20Nirvana"
+    },
+    {
+      "tier": "A",
+      "t": "Hotel Inhumans Vol. 1",
+      "meta": "Aug 11 · Seven Seas · assassin action",
+      "why": "Ao Tajima's hotel that caters to hired killers. Stylish contract-killer action with an anime already behind it.",
+      "url": "https://www.barnesandnoble.com/s/Hotel%20Inhumans"
+    },
+    {
+      "tier": "A",
+      "t": "Girl Meets Rock! Vol. 1",
+      "meta": "Aug 4 · Seven Seas · band slice-of-life",
+      "why": "A girls' band comedy in the same space as Bocchi the Rock!, which you already shelve.",
+      "url": "https://www.barnesandnoble.com/s/Girl%20Meets%20Rock"
+    },
+    {
+      "tier": "A",
+      "t": "Three Days of Happiness: The Complete Omnibus",
+      "meta": "Sep 22 · Yen Press · melancholy romance",
+      "why": "A man sells most of his remaining life for money and spends what is left. The whole story in one book.",
+      "url": "https://www.barnesandnoble.com/s/Three%20Days%20of%20Happiness%20Complete%20Omnibus"
+    },
+    {
+      "tier": "B",
+      "t": "Yuri Yuri Panic: A Case of Extreme Cuteness Has Occurred!, Vol. 1",
+      "meta": "Sep 22 · Seven Seas · GL romcom",
+      "why": "A popular girl proposes to a plain introvert. Light GL comedy for Cat.",
+      "url": "https://www.barnesandnoble.com/s/Yuri%20Yuri%20Panic"
+    },
+    {
+      "tier": "B",
+      "t": "Can You Kiss Me First? Vol. 1",
+      "meta": "Sep · Seven Seas · GL romance",
+      "why": "Yamayade's yuri romance. Another one for Cat's GL shelf.",
+      "url": "https://www.barnesandnoble.com/s/Can%20You%20Kiss%20Me%20First"
+    },
+    {
+      "tier": "B",
+      "t": "The Demon Consort: \"I Love You\" Are Frightening Words, Vol. 1",
+      "meta": "Aug 25 · Yen Press · palace mystery",
+      "why": "A curse-murder mystery with a consort at the center. Worth a look for Cat if she wants more in the Apothecary Diaries vein.",
+      "url": "https://www.barnesandnoble.com/s/The%20Demon%20Consort"
+    },
+    {
+      "tier": "B",
+      "t": "Colori Colore Creare, Vol. 1",
+      "meta": "Aug 25 · Titan Manga · fantasy slice-of-life",
+      "why": "The newest from Kozue Amano (Aria). Quiet and pretty, a slow read rather than a hook.",
+      "url": "https://www.barnesandnoble.com/s/Colori%20Colore%20Creare"
+    },
+    {
+      "tier": "B",
+      "t": "Shiba Inu Rooms, Vol. 1",
+      "meta": "Sep 1 · VIZ · ghost comedy",
+      "why": "A cheap apartment comes with a ghost Shiba Inu. Short, gentle comedy.",
+      "url": "https://www.barnesandnoble.com/s/Shiba%20Inu%20Rooms"
+    },
+    {
+      "tier": "B",
+      "t": "Give Me a Hug, Mr. Frog!, Vol. 1",
+      "meta": "Sep 22 · Seven Seas · romcom",
+      "why": "A student council president falls for whoever is inside the frog mascot. Fits your romcom lane without standing out.",
+      "url": "https://www.barnesandnoble.com/s/Give%20Me%20a%20Hug%20Mr%20Frog"
+    },
+    {
+      "tier": "B",
+      "t": "Boyish Girlfriend, Vol. 1",
+      "meta": "Sep 22 · Square Enix · romcom",
+      "why": "Couple romcom built on one joke. Fine if the art lands for you.",
+      "url": "https://www.barnesandnoble.com/s/Boyish%20Girlfriend"
+    },
+    {
+      "tier": "B",
+      "t": "Thus Spoke the Rabbit, Vol. 1",
+      "meta": "Sep 22 · Yen Press · action horror",
+      "why": "Wolf and bunny girls against man-eating rabbits. Pulpy, but in your action-horror space.",
+      "url": "https://www.barnesandnoble.com/s/Thus%20Spoke%20the%20Rabbit"
+    },
+    {
+      "tier": "C",
+      "t": "Cells at Work! Cat, Vol. 1",
+      "meta": "Sep 22 · Kodansha · spinoff",
+      "why": "Cells at Work set inside a cat. A spinoff for fans of the franchise.",
+      "url": "https://www.barnesandnoble.com/s/Cells%20at%20Work%20Cat"
+    },
+    {
+      "tier": "C",
+      "t": "The Amazing Digital Circus, Vol. 1",
+      "meta": "Sep 8 · VIZ · web series tie-in",
+      "why": "Adaptation of the web animation. Only if you follow the show.",
+      "url": "https://www.barnesandnoble.com/s/Amazing%20Digital%20Circus%20manga"
+    },
+    {
+      "tier": "C",
+      "t": "Mobile Suit Gundam the Witch from Mercury: Vanadis Heart, Vol. 1",
+      "meta": "Aug 25 · Yen Press · mecha spinoff",
+      "why": "Set after the anime finale. For Gundam fans only.",
+      "url": "https://www.barnesandnoble.com/s/Witch%20from%20Mercury%20Vanadis%20Heart"
+    },
+    {
+      "tier": "C",
+      "t": "The Blood-Crawling Princess of a Ruined Country, Vol. 1",
+      "meta": "Aug 25 · Yen Press · revenge dark fantasy",
+      "why": "Enslaved princess revenge story. Familiar setup.",
+      "url": "https://www.barnesandnoble.com/s/Blood-Crawling%20Princess%20of%20a%20Ruined%20Country"
+    },
+    {
+      "tier": "C",
+      "t": "Mage of Leda, Vol. 1",
+      "meta": "Sep 22 · Yen Press · fantasy",
+      "why": "An orphan takes a shady offer of magic. Standard fantasy launch.",
+      "url": "https://www.barnesandnoble.com/s/Mage%20of%20Leda"
+    },
+    {
+      "tier": "C",
+      "t": "I Like Cat Butts Vol. 1",
+      "meta": "Sep 15 · Seven Seas · pet comedy",
+      "why": "Cat-owner gag manga. Cute, slight.",
+      "url": "https://www.barnesandnoble.com/s/I%20Like%20Cat%20Butts"
+    },
+    {
+      "tier": "D",
+      "t": "My Useless \"Cuddle\" Skill Awakened, and Now I'm Building the Ultimate Harem! Vol. 1",
+      "meta": "Sep 15 · Ghost Ship · isekai harem",
+      "why": "Isekai harem with a one-line premise. Outside the lane you read.",
+      "url": "https://www.barnesandnoble.com/s/Useless%20Cuddle%20Skill%20Awakened"
+    },
+    {
+      "tier": "D",
+      "t": "Uesugi-kun Wants to Quit Being a Girl Vol. 1",
+      "meta": "Aug 18 · Seven Seas · gender-swap romcom",
+      "why": "Shrine curse gender swap. Not your usual lane.",
+      "url": "https://www.barnesandnoble.com/s/Uesugi-kun%20Wants%20to%20Quit%20Being%20a%20Girl"
+    }
   ]
 }
