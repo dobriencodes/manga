@@ -75,7 +75,7 @@
     "nextVol": "2026-11-03 — Vol. 22",
     "notes": "VIZ; JP ended Jul 12 2026 at 25 vols; anime S2 on Netflix",
     "donate": false,
-    "verified": "2026-09-09"
+    "verified": "2026-09-28"
   },
   {
     "title": "Blue Lock",
@@ -112,11 +112,12 @@
     "ownerStatus": "Complete set",
     "jpStatus": "Ongoing",
     "enStatus": "Collected",
-    "enVols": "6",
+    "enVols": "7",
     "notes": "Yen Press; hiatus ended Jun 2026; 8 JP vols; resumed in Kirara MAX",
     "donate": false,
-    "verified": "2026-04-22",
-    "jpVols": "8"
+    "verified": "2026-09-28",
+    "jpVols": "8",
+    "nextVol": "2026-11-24 — Vol. 8"
   },
   {
     "title": "Bocchi the Rock! Side Story: Kikuri Hiroi's Heavy-Drinking Diary",
@@ -181,7 +182,7 @@
     "nextVol": "2026-10-13 — Vol. 22",
     "notes": "VIZ; Part 1 = vols 1-11; Part 2 = vols 12-23; ended Mar 25 2026; complete at 23",
     "donate": false,
-    "verified": "2026-09-23"
+    "verified": "2026-09-28"
   },
   {
     "title": "Crazy Food Truck",
@@ -283,7 +284,7 @@
     "nextVol": "2026-12-08 — Vol. 15",
     "notes": "VIZ; manga on indefinite hiatus; 15 JP vols; EN vol 15 Dec 2026",
     "donate": false,
-    "verified": "2026-09-09"
+    "verified": "2026-09-28"
   },
   {
     "title": "Gantz",
@@ -346,9 +347,9 @@
     "enVols": "3",
     "jpVols": "4+",
     "nextVol": "2026-10-27 — Vol. 4",
-    "notes": "Kodansha",
+    "notes": "Yen Press",
     "donate": false,
-    "verified": "2026-09-09"
+    "verified": "2026-09-28"
   },
   {
     "title": "Hitomi-chan Is Shy with Strangers",
@@ -456,7 +457,7 @@
     "nextVol": "2026-11-03 — Vol. 9",
     "notes": "VIZ; anime Apr 2027; JP at 12 vols",
     "donate": false,
-    "verified": "2026-09-09"
+    "verified": "2026-09-28"
   },
   {
     "title": "Kaiju No. 8",
@@ -498,7 +499,7 @@
     "nextVol": "TBD — Vol. 12 (FINAL)",
     "notes": "Yen Press; complete at 12 JP vols (Apr 2026); anime Apr–Jun 2025 on Crunchyroll; live-action film Aug 2025",
     "donate": false,
-    "verified": "2026-09-23"
+    "verified": "2026-09-28"
   },
   {
     "title": "Look Back",
@@ -733,10 +734,10 @@
     "enStatus": "Collected",
     "enVols": "7",
     "jpVols": "8+",
-    "nextVol": "",
+    "nextVol": "2026-11-17 — Vol. 8",
     "notes": "Square Enix",
     "donate": false,
-    "verified": "2026-07-08"
+    "verified": "2026-09-28"
   },
   {
     "title": "The Summer Hikaru Died",
@@ -750,7 +751,7 @@
     "nextVol": "2026-10-27 — Vol. 8",
     "notes": "Yen Press",
     "donate": false,
-    "verified": "2026-09-09"
+    "verified": "2026-09-28"
   },
   {
     "title": "Super Ball Girls",
@@ -817,7 +818,7 @@
     "nextVol": "2026-10-20 — Vol. 27 (FINAL)",
     "notes": "VIZ; complete at 27 JP; vol 26 Aug 18, vol 27 (FINAL) Oct 20 2026",
     "donate": false,
-    "verified": "2026-09-09"
+    "verified": "2026-09-28"
   },
   {
     "title": "We Started a Threesome!!",
@@ -857,7 +858,7 @@
     "nextVol": "2026-12-08 — Vol. 15",
     "notes": "Kodansha; anime airing Apr 2026",
     "donate": false,
-    "verified": "2026-09-09"
+    "verified": "2026-09-28"
   },
   {
     "title": "You Like Me, Not My Daughter?!",
@@ -936,7 +937,7 @@
     "nextVol": "2026-10-06 — Vol. 21",
     "notes": "VIZ",
     "donate": false,
-    "verified": "2026-09-23"
+    "verified": "2026-09-28"
   },
   {
     "title": "Dead Rock",
@@ -964,7 +965,7 @@
     "nextVol": "2026-10-27 — Vol. 3",
     "notes": "Yen Press",
     "donate": false,
-    "verified": "2026-09-09"
+    "verified": "2026-09-28"
   },
   {
     "title": "Heart Gear",
@@ -1005,7 +1006,7 @@
     "nextVol": "2026-11-17 — Vol. 2",
     "notes": "VIZ; Dec 2025; ongoing series",
     "donate": false,
-    "verified": "2026-09-09"
+    "verified": "2026-09-28"
   },
   {
     "title": "My Favorite VTuber Is Scary IRL",
@@ -1019,7 +1020,7 @@
     "nextVol": "2026-10-13 — Vol. 3",
     "notes": "Square Enix Manga; vol 1 Feb 24 2026, vol 2 Jun 9 2026, vol 3 Oct 13 2026; JP at 4 vols",
     "donate": false,
-    "verified": "2026-09-23"
+    "verified": "2026-09-28"
   },
   {
     "title": "Monster Musume: Deluxe Edition",
@@ -1192,9 +1193,9 @@
     "enVols": "15",
     "notes": "Square Enix; art by Nekokurage, story Natsu Hyuuga; ongoing. Cat's collection.",
     "donate": false,
-    "verified": "2026-07-10",
+    "verified": "2026-09-28",
     "jpVols": "16+",
-    "nextVol": ""
+    "nextVol": "2026-11-03 — Vol. 16"
   },
   {
     "title": "Witch Hat Atelier: Grimoire Edition",
@@ -1217,12 +1218,12 @@
     "ownerStatus": "Partial run",
     "jpStatus": "Ongoing",
     "enStatus": "Caught Up",
-    "enVols": "1",
+    "enVols": "3",
     "jpVols": "5+",
     "nextVol": "",
     "notes": "Yen Press; GL romance; ongoing",
     "donate": false,
-    "verified": "2026-08-26"
+    "verified": "2026-09-28"
   },
   {
     "title": "Monthly in the Garden with My Landlord",
@@ -1403,7 +1404,7 @@
     "notes": "Yen Press deluxe 3-in-1 omnibus; 6 JP vols = 2 Ration Packs; 1st Ration Pack (vols 1–3) released Aug 25, 2026, 488pp, ISBN 9798855426915; 2nd Ration Pack not yet announced",
     "nextVol": "TBD — 2nd Ration Pack (vols 4–6)",
     "donate": false,
-    "verified": "2026-09-23",
+    "verified": "2026-09-28",
     "jpVols": "2",
     "progOverride": "1"
   }
