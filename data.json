@@ -1217,7 +1217,7 @@
     "owned": "1",
     "ownerStatus": "Partial run",
     "jpStatus": "Complete",
-    "enStatus": "Caught Up",
+    "enStatus": "Behind",
     "enVols": "3",
     "jpVols": "3",
     "nextVol": "",
