@@ -58,10 +58,10 @@
     "ownerStatus": "Single volume",
     "jpStatus": "Complete",
     "enStatus": "Catching Up",
-    "enVols": "4",
-    "notes": "",
+    "enVols": "5",
+    "notes": "VIZ; complete at 5; final vol Oct 1 2024",
     "donate": false,
-    "verified": "2026-04-22"
+    "verified": "2026-10-20"
   },
   {
     "title": "Blue Box",
@@ -701,8 +701,8 @@
   {
     "title": "She Loves to Cook and She Loves to Eat",
     "owner": "dan",
-    "owned": "1–5 (complete)",
-    "ownerStatus": "Complete set",
+    "owned": "1–5",
+    "ownerStatus": "Partial run",
     "jpStatus": "Ongoing",
     "enStatus": "Collected",
     "enVols": "5",
