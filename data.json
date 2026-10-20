@@ -19,11 +19,11 @@
     "jpStatus": "Ongoing",
     "enStatus": "Caught Up",
     "enVols": "17",
-    "jpVols": "21+",
+    "jpVols": "24+",
     "nextVol": "2027-03-09 — Vol. 19",
     "notes": "VIZ; anime Spring 2026 on Netflix",
     "donate": false,
-    "verified": "2026-08-26"
+    "verified": "2026-10-20"
   },
   {
     "title": "Alice in Borderland",
@@ -71,11 +71,11 @@
     "jpStatus": "Complete",
     "enStatus": "Caught Up",
     "enVols": "21",
-    "jpVols": "25",
+    "jpVols": "28",
     "nextVol": "2026-11-03 — Vol. 22",
-    "notes": "VIZ; JP ended Jul 12 2026 at 25 vols; anime S2 on Netflix",
+    "notes": "VIZ; JP ended Jul 13 2026; 28 JP vols (vol 27 Oct 2 2026, vol 28 Dec 4 2026); anime S2 on Netflix",
     "donate": false,
-    "verified": "2026-10-14"
+    "verified": "2026-10-20"
   },
   {
     "title": "Blue Lock",
@@ -85,25 +85,25 @@
     "jpStatus": "Ongoing",
     "enStatus": "Behind",
     "enVols": "34",
-    "jpVols": "39+",
+    "jpVols": "40+",
     "nextVol": "2026-10-20 — Vol. 35",
     "notes": "Kodansha; has 2× vol 1 (B&N exclusive keepsake + regular copy)",
     "donate": false,
-    "verified": "2026-10-14"
+    "verified": "2026-10-20"
   },
   {
     "title": "Blue Period",
     "owner": "dan",
     "owned": "1–3",
     "ownerStatus": "Partial run",
-    "jpStatus": "Complete",
+    "jpStatus": "Ongoing",
     "enStatus": "Catching Up",
     "enVols": "17",
-    "jpVols": "18",
+    "jpVols": "19+",
     "nextVol": "2026-12-01 — Vol. 18 (FINAL)",
     "notes": "Kodansha",
     "donate": false,
-    "verified": "2026-10-14"
+    "verified": "2026-10-20"
   },
   {
     "title": "Bocchi the Rock!",
@@ -115,8 +115,8 @@
     "enVols": "7",
     "notes": "Yen Press; hiatus ended Jun 2026; 8 JP vols; resumed in Kirara MAX",
     "donate": false,
-    "verified": "2026-10-14",
-    "jpVols": "8",
+    "verified": "2026-10-20",
+    "jpVols": "8+",
     "nextVol": "2026-11-24 — Vol. 8"
   },
   {
@@ -127,11 +127,11 @@
     "jpStatus": "Ongoing",
     "enStatus": "Caught Up",
     "enVols": "3",
-    "jpVols": "5+",
+    "jpVols": "7+",
     "nextVol": "2026-12-15 — Vol. 4",
     "notes": "Yen Press",
     "donate": false,
-    "verified": "2026-10-07"
+    "verified": "2026-10-20"
   },
   {
     "title": "Boys Run the Riot",
@@ -228,11 +228,11 @@
     "jpStatus": "Ongoing",
     "enStatus": "Behind",
     "enVols": "6",
-    "jpVols": "6+",
+    "jpVols": "9+",
     "nextVol": "2027-02-16 — Vol. 7",
     "notes": "By Golden Kamuy creator Satoru Noda; VIZ",
     "donate": false,
-    "verified": "2026-08-26"
+    "verified": "2026-10-20"
   },
   {
     "title": "Donuts Under the Crescent Moon",
@@ -266,11 +266,11 @@
     "jpStatus": "Ongoing",
     "enStatus": "Behind",
     "enVols": "6",
-    "jpVols": "8+",
+    "jpVols": "9+",
     "nextVol": "2026-11-17 — Vol. 7",
     "notes": "Square Enix Manga & Books",
     "donate": false,
-    "verified": "2026-10-14"
+    "verified": "2026-10-20"
   },
   {
     "title": "Frieren: Beyond Journey's End",
@@ -280,11 +280,11 @@
     "jpStatus": "Hiatus",
     "enStatus": "Caught Up",
     "enVols": "14",
-    "jpVols": "15",
+    "jpVols": "15+",
     "nextVol": "2026-12-08 — Vol. 15",
     "notes": "VIZ; manga on indefinite hiatus; 15 JP vols; EN vol 15 Dec 2026",
     "donate": false,
-    "verified": "2026-10-14"
+    "verified": "2026-10-20"
   },
   {
     "title": "Gantz",
@@ -331,11 +331,11 @@
     "jpStatus": "Ongoing",
     "enStatus": "Behind",
     "enVols": "5",
-    "jpVols": "6",
+    "jpVols": "6+",
     "nextVol": "",
     "notes": "VIZ",
     "donate": true,
-    "verified": "2026-07-15"
+    "verified": "2026-10-20"
   },
   {
     "title": "The Guy She Was Interested In Wasn't a Guy at All",
@@ -349,7 +349,7 @@
     "nextVol": "2026-10-27 — Vol. 4",
     "notes": "Yen Press",
     "donate": false,
-    "verified": "2026-10-14"
+    "verified": "2026-10-20"
   },
   {
     "title": "Hitomi-chan Is Shy with Strangers",
@@ -382,14 +382,14 @@
     "owner": "dan",
     "owned": "1",
     "ownerStatus": "Single volume",
-    "jpStatus": "Ongoing",
+    "jpStatus": "Complete",
     "enStatus": "Behind",
     "enVols": "5",
-    "jpVols": "7+",
+    "jpVols": "8",
     "nextVol": "2026-12-15 — Vol. 6",
-    "notes": "Yen Press",
+    "notes": "Yen Press; JP ends with vol 8 (late 2026)",
     "donate": false,
-    "verified": "2026-10-07"
+    "verified": "2026-10-20"
   },
   {
     "title": "I Get the Feeling Nobukuni-san Likes Me",
@@ -411,11 +411,11 @@
     "jpStatus": "Ongoing",
     "enStatus": "Caught Up",
     "enVols": "4",
-    "jpVols": "5",
+    "jpVols": "5+",
     "nextVol": "2027-01-26 — Vol. 5",
     "notes": "Yen Press; Kadokawa; ongoing; JP vol 5 Jun 2025; EN vol 5 TBD",
     "donate": false,
-    "verified": "2026-08-12"
+    "verified": "2026-10-20"
   },
   {
     "title": "Initial D",
@@ -457,7 +457,7 @@
     "nextVol": "2026-11-03 — Vol. 9",
     "notes": "VIZ; anime Apr 2027; JP at 12 vols",
     "donate": false,
-    "verified": "2026-10-14"
+    "verified": "2026-10-20"
   },
   {
     "title": "Kaiju No. 8",
@@ -521,11 +521,11 @@
     "jpStatus": "Ongoing",
     "enStatus": "Collected",
     "enVols": "4",
-    "jpVols": "18",
+    "jpVols": "18+",
     "nextVol": "2026-11-24 — Vol. 5",
     "notes": "Denpa Books; 18 JP vols; ongoing EN release; vol 5 date UNCONFIRMED — no Denpa product page; retailer dates conflict (Nov 24 2026 / Mar 23 2027 / May 2027)",
     "donate": false,
-    "verified": "2026-10-07"
+    "verified": "2026-10-20"
   },
   {
     "title": "Miss Kobayashi's Dragon Maid",
@@ -535,11 +535,11 @@
     "jpStatus": "Ongoing",
     "enStatus": "Caught Up",
     "enVols": "17",
-    "jpVols": "17+",
+    "jpVols": "20+",
     "nextVol": "2026-12-15 — Vol. 18",
     "notes": "Seven Seas",
     "donate": false,
-    "verified": "2026-10-07"
+    "verified": "2026-10-20"
   },
   {
     "title": "Miss Kobayashi's Dragon Maid in COLOR!",
@@ -626,11 +626,11 @@
     "jpStatus": "Ongoing",
     "enStatus": "Collected",
     "enVols": "5",
-    "jpVols": "6+",
+    "jpVols": "8+",
     "nextVol": "2026-12-22 — Vol. 6",
     "notes": "Seven Seas; vol 5 released Jul 28 2026; vol 6 Dec 22 2026",
     "donate": false,
-    "verified": "2026-10-14"
+    "verified": "2026-10-20"
   },
   {
     "title": "[Oshi no Ko]",
@@ -649,12 +649,12 @@
     "owner": "dan",
     "owned": "1–11",
     "ownerStatus": "Partial run",
-    "jpStatus": "Ongoing",
+    "jpStatus": "Hiatus",
     "enStatus": "Collected",
     "enVols": "11",
     "jpVols": "11+",
     "nextVol": "",
-    "notes": "Seven Seas (Ghost Ship)",
+    "notes": "Seven Seas (Ghost Ship); JP on break since Aug 2026",
     "donate": false,
     "verified": "2026-10-20"
   },
@@ -670,7 +670,7 @@
     "nextVol": "2027-02-16 — Vol. 11",
     "notes": "VIZ; anime premiered on Adult Swim Mar 2026",
     "donate": false,
-    "verified": "2026-08-26"
+    "verified": "2026-10-20"
   },
   {
     "title": "Ruri Dragon",
@@ -680,11 +680,11 @@
     "jpStatus": "Ongoing",
     "enStatus": "Caught Up",
     "enVols": "4",
-    "jpVols": "4+",
+    "jpVols": "5+",
     "nextVol": "2027-03-02 — Vol. 5",
     "notes": "VIZ",
     "donate": false,
-    "verified": "2026-08-26"
+    "verified": "2026-10-20"
   },
   {
     "title": "The Secret of Friendship",
@@ -703,13 +703,14 @@
     "owner": "dan",
     "owned": "1–5 (complete)",
     "ownerStatus": "Complete set",
-    "jpStatus": "Complete",
+    "jpStatus": "Ongoing",
     "enStatus": "Collected",
     "enVols": "5",
+    "jpVols": "6+",
     "nextVol": "",
-    "notes": "Yen Press",
+    "notes": "Yen Press; JP resumed Jun 2026 after hiatus; JP vol 6 Jun 2026",
     "donate": false,
-    "verified": "2026-04-22"
+    "verified": "2026-10-20"
   },
   {
     "title": "Sho-Ha Shoten!",
@@ -733,25 +734,25 @@
     "jpStatus": "Ongoing",
     "enStatus": "Collected",
     "enVols": "7",
-    "jpVols": "8+",
+    "jpVols": "9+",
     "nextVol": "2026-11-17 — Vol. 8",
     "notes": "Square Enix",
     "donate": false,
-    "verified": "2026-10-14"
+    "verified": "2026-10-20"
   },
   {
     "title": "The Summer Hikaru Died",
     "owner": "dan",
     "owned": "1–7",
     "ownerStatus": "Partial run",
-    "jpStatus": "Ongoing",
+    "jpStatus": "Complete",
     "enStatus": "Caught Up",
     "enVols": "7",
     "jpVols": "9",
     "nextVol": "2026-10-27 — Vol. 8",
-    "notes": "Yen Press",
+    "notes": "Yen Press; JP final chapter Oct 20 2026; final JP vol not yet dated",
     "donate": false,
-    "verified": "2026-10-14"
+    "verified": "2026-10-20"
   },
   {
     "title": "Super Ball Girls",
@@ -854,25 +855,25 @@
     "jpStatus": "Ongoing",
     "enStatus": "Collected",
     "enVols": "14",
-    "jpVols": "15+",
+    "jpVols": "16+",
     "nextVol": "2026-12-08 — Vol. 15",
     "notes": "Kodansha; anime airing Apr 2026",
     "donate": false,
-    "verified": "2026-10-14"
+    "verified": "2026-10-20"
   },
   {
     "title": "You Like Me, Not My Daughter?!",
     "owner": "dan",
     "owned": "1–8",
     "ownerStatus": "Partial run",
-    "jpStatus": "Complete",
+    "jpStatus": "Ongoing",
     "enStatus": "Caught Up",
     "enVols": "8",
-    "jpVols": "9",
+    "jpVols": "10+",
     "nextVol": "",
     "notes": "Seven Seas; complete at 9 JP vols (Nov 2025)",
     "donate": true,
-    "verified": "2026-09-09"
+    "verified": "2026-10-20"
   },
   {
     "title": "One Piece",
@@ -883,11 +884,11 @@
     "jpStatus": "Ongoing",
     "enStatus": "Behind",
     "enVols": "112",
-    "jpVols": "114+",
+    "jpVols": "115+",
     "nextVol": "2026-11-10 — Vol. 113",
     "notes": "VIZ; owns 1–23, Box Set 2 (vols 24–46), 101–112; missing vols 47–100",
     "donate": false,
-    "verified": "2026-10-14"
+    "verified": "2026-10-20"
   },
   {
     "title": "One Piece: Ace's Story — The Manga",
@@ -933,25 +934,25 @@
     "jpStatus": "Ongoing",
     "enStatus": "Behind",
     "enVols": "21",
-    "jpVols": "23+",
+    "jpVols": "25+",
     "nextVol": "2026-12-01 — Vol. 22",
     "notes": "VIZ",
     "donate": false,
-    "verified": "2026-10-07"
+    "verified": "2026-10-20"
   },
   {
     "title": "Dead Rock",
     "owner": "dan",
     "owned": "1",
     "ownerStatus": "Single volume",
-    "jpStatus": "Ongoing",
+    "jpStatus": "Hiatus",
     "enStatus": "Behind",
     "enVols": "5",
-    "jpVols": "6+",
+    "jpVols": "8+",
     "nextVol": "2026-12-15 — Vol. 6",
-    "notes": "Kodansha; ongoing; by Hiro Mashima (Fairy Tail, Edens Zero); EN vol 5 Sep 15 2026; vol 6 Dec 15 2026 (PRH listing)",
+    "notes": "Kodansha; ongoing; by Hiro Mashima (Fairy Tail, Edens Zero); EN vol 5 Sep 15 2026; vol 6 Dec 15 2026 (PRH listing); JP on hiatus since May 2026; new arc due winter",
     "donate": false,
-    "verified": "2026-10-07"
+    "verified": "2026-10-20"
   },
   {
     "title": "Gals Can't Be Kind to Otaku?!",
@@ -961,11 +962,11 @@
     "jpStatus": "Ongoing",
     "enStatus": "Collected",
     "enVols": "2",
-    "jpVols": "3+",
+    "jpVols": "13+",
     "nextVol": "2026-10-27 — Vol. 3",
     "notes": "Yen Press",
     "donate": false,
-    "verified": "2026-10-14"
+    "verified": "2026-10-20"
   },
   {
     "title": "Heart Gear",
@@ -1006,7 +1007,7 @@
     "nextVol": "2026-11-17 — Vol. 2",
     "notes": "VIZ; Dec 2025; ongoing series",
     "donate": false,
-    "verified": "2026-10-14"
+    "verified": "2026-10-20"
   },
   {
     "title": "My Favorite VTuber Is Scary IRL",
@@ -1020,21 +1021,21 @@
     "nextVol": "2027-02-09 — Vol. 4",
     "notes": "Square Enix Manga; vol 1 Feb 24 2026, vol 2 Jun 9 2026, vol 3 Oct 13 2026, vol 4 Feb 9 2027; JP at 4 vols",
     "donate": false,
-    "verified": "2026-10-14"
+    "verified": "2026-10-20"
   },
   {
     "title": "Monster Musume: Deluxe Edition",
     "owner": "dan",
     "owned": "Deluxe Ed. 1–2",
     "ownerStatus": "Partial run",
-    "jpStatus": "Complete",
+    "jpStatus": "Ongoing",
     "enStatus": "Collected",
     "enVols": "2",
     "nextVol": "2027-06-01 — Deluxe Ed. 3 (vols 7–9)",
-    "notes": "Seven Seas hardcover omnibus; 3-in-1; 7 total (21 JP vols ÷ 3); Ed.1 Oct 2025, Ed.2 Feb 2026; Ed.3 Jun 2027",
+    "notes": "Seven Seas hardcover omnibus; 3-in-1; 7 total (21 JP vols ÷ 3); Ed.1 Oct 2025, Ed.2 Feb 2026; Ed.3 Jun 2027; original still ongoing in JP (21 vols as of Mar 2026)",
     "donate": false,
-    "verified": "2026-09-09",
-    "jpVols": "7"
+    "verified": "2026-10-20",
+    "jpVols": "7+"
   },
   {
     "title": "Nude Model and Other Stories",
@@ -1083,11 +1084,11 @@
     "jpStatus": "Ongoing",
     "enStatus": "Caught Up",
     "enVols": "20",
-    "jpVols": "22+",
+    "jpVols": "23+",
     "nextVol": "2026-12-22 — Vol. 21",
     "notes": "VIZ; JP ongoing at 22 vols; EN phys. at 17; vols 18-20 on VIZ Manga app",
     "donate": false,
-    "verified": "2026-10-14"
+    "verified": "2026-10-20"
   },
   {
     "title": "Nana: 25th Anniversary Edition",
@@ -1095,13 +1096,13 @@
     "owned": "Omnibus 1–5 (JP vols 1–10)",
     "ownerStatus": "Partial run",
     "enVols": "5",
-    "jpVols": "11",
+    "jpVols": "11+",
     "jpStatus": "Hiatus",
     "enStatus": "Caught Up",
     "nextVol": "2026-12-01 — Omnibus 6",
     "notes": "VIZ; 2-in-1 omnibus; 25th anniversary reprint; 11 total",
     "donate": false,
-    "verified": "2026-10-07",
+    "verified": "2026-10-20",
     "progOverride": "5"
   },
   {
@@ -1179,7 +1180,7 @@
     "enVols": "7",
     "notes": "Seven Seas; by Iwatobineko; anime adaptation 2026. Cat's collection.",
     "donate": false,
-    "verified": "2026-10-14",
+    "verified": "2026-10-20",
     "jpVols": "9+",
     "nextVol": "2026-12-22 — Vol. 8"
   },
@@ -1193,8 +1194,8 @@
     "enVols": "15",
     "notes": "Square Enix; art by Nekokurage, story Natsu Hyuuga; ongoing. Cat's collection.",
     "donate": false,
-    "verified": "2026-10-14",
-    "jpVols": "16+",
+    "verified": "2026-10-20",
+    "jpVols": "17+",
     "nextVol": "2026-11-03 — Vol. 16"
   },
   {
@@ -1205,11 +1206,11 @@
     "jpStatus": "Ongoing",
     "enStatus": "Caught Up",
     "enVols": "2",
-    "jpVols": "1",
+    "jpVols": "2+",
     "nextVol": "2026-11-03 — Grimoire Ed. 3 (vols 7–9)",
     "notes": "Kodansha; deluxe 3-in-1 hardcover; gold foil covers; ~600pp each; Ed.1 (vols 1–3) May 5 2026; Ed.2 (vols 4–6) Sep 22 2026 (released); Ed.3 (vols 7–9) Nov 3 2026",
     "donate": false,
-    "verified": "2026-10-14"
+    "verified": "2026-10-20"
   },
   {
     "title": "I Want to Be a Wall",
@@ -1244,14 +1245,14 @@
     "owner": "cat",
     "owned": "1–2",
     "ownerStatus": "Partial run",
-    "jpStatus": "Complete",
+    "jpStatus": "Ongoing",
     "enStatus": "Caught Up",
     "enVols": "2",
-    "jpVols": "2",
+    "jpVols": "8+",
     "nextVol": "",
     "notes": "Kodansha; complete at 2",
     "donate": false,
-    "verified": "2026-08-26"
+    "verified": "2026-10-20"
   },
   {
     "title": "Usotoki Rhetoric",
