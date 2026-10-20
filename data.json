@@ -569,15 +569,15 @@
   {
     "title": "My Dress-Up Darling XOXO!",
     "owner": "dan",
-    "owned": "0",
-    "ownerStatus": "Not owned",
+    "owned": "1 (complete)",
+    "ownerStatus": "Complete set",
     "jpStatus": "Complete",
-    "enStatus": "Catching Up",
+    "enStatus": "Collected",
     "enVols": "1(one-shot)",
-    "nextVol": "2026-10-20 — One-Shot",
+    "nextVol": "",
     "notes": "Square Enix; spin-off by Choboraunyopomi; one-shot vol; Oct 20, 2026",
     "donate": false,
-    "verified": "2026-10-14"
+    "verified": "2026-10-20"
   },
   {
     "title": "My Girlfriend Is 8 Meters Tall",
@@ -647,16 +647,16 @@
   {
     "title": "Please Go Home, Miss Akutsu!",
     "owner": "dan",
-    "owned": "1–10",
+    "owned": "1–11",
     "ownerStatus": "Partial run",
     "jpStatus": "Ongoing",
     "enStatus": "Collected",
-    "enVols": "10",
+    "enVols": "11",
     "jpVols": "11+",
-    "nextVol": "2026-10-20 — Vol. 11",
+    "nextVol": "",
     "notes": "Seven Seas (Ghost Ship)",
     "donate": false,
-    "verified": "2026-10-14"
+    "verified": "2026-10-20"
   },
   {
     "title": "Rooster Fighter",
@@ -809,16 +809,16 @@
   {
     "title": "Undead Unluck",
     "owner": "dan",
-    "owned": "1–26",
-    "ownerStatus": "Partial run",
+    "owned": "1–27 (complete)",
+    "ownerStatus": "Complete set",
     "jpStatus": "Complete",
-    "enStatus": "Caught Up",
-    "enVols": "26",
+    "enStatus": "Collected",
+    "enVols": "27",
     "jpVols": "27",
-    "nextVol": "2026-10-20 — Vol. 27 (FINAL)",
+    "nextVol": "",
     "notes": "VIZ; complete at 27 JP; vol 26 Aug 18, vol 27 (FINAL) Oct 20 2026",
     "donate": false,
-    "verified": "2026-10-14"
+    "verified": "2026-10-20"
   },
   {
     "title": "We Started a Threesome!!",
