@@ -324,20 +324,6 @@
     "verified": "2026-04-22"
   },
   {
-    "title": "Gokurakugai",
-    "owner": "dan",
-    "owned": "1–2",
-    "ownerStatus": "Partial run",
-    "jpStatus": "Ongoing",
-    "enStatus": "Behind",
-    "enVols": "5",
-    "jpVols": "6+",
-    "nextVol": "",
-    "notes": "VIZ",
-    "donate": true,
-    "verified": "2026-10-20"
-  },
-  {
     "title": "The Guy She Was Interested In Wasn't a Guy at All",
     "owner": "dan",
     "owned": "1–3",
@@ -420,7 +406,7 @@
   {
     "title": "Initial D",
     "owner": "dan",
-    "owned": "Omnibus 1–2",
+    "owned": "Omnibus 1–3",
     "ownerStatus": "Partial run",
     "jpStatus": "Complete",
     "enStatus": "Behind",
@@ -578,20 +564,6 @@
     "notes": "Square Enix; spin-off by Choboraunyopomi; one-shot vol; Oct 20, 2026",
     "donate": false,
     "verified": "2026-10-20"
-  },
-  {
-    "title": "My Girlfriend Is 8 Meters Tall",
-    "owner": "dan",
-    "owned": "1–4",
-    "ownerStatus": "Partial run",
-    "jpStatus": "Complete",
-    "enStatus": "Caught Up",
-    "enVols": "4",
-    "jpVols": "6",
-    "nextVol": "",
-    "notes": "Seven Seas; complete at 6 JP vols (Jan 2025)",
-    "donate": true,
-    "verified": "2026-09-16"
   },
   {
     "title": "My Love Story!!",
@@ -872,7 +844,7 @@
     "jpVols": "10+",
     "nextVol": "",
     "notes": "Seven Seas; complete at 9 JP vols (Nov 2025)",
-    "donate": true,
+    "donate": false,
     "verified": "2026-10-20"
   },
   {
