@@ -1,203 +1,98 @@
 {
- "date": "2026-10-01",
- "range": "Late September – November 2026",
- "note": "Debut-volume manga (no light novels) from September 23 through October 2026, plus November debuts with confirmed dates. In Such a Small World and Elden Ring: Become Lord are announced but have no confirmed date yet. Links go to Barnes & Noble.",
+ "date": "2026-11-01",
+ "range": "December 2026 – January 2027",
+ "note": "Debut-volume manga (no light novels) releasing in December 2026, plus January 2027 debuts with confirmed dates. Asobi Asobase Omnibus 1 from last month's list has moved to January 5 in Dark Horse's solicits. Several Yen Press December licenses have no confirmed day yet and are left out. Links go to Barnes & Noble.",
  "items": [
   {
    "tier": "S",
-   "t": "Witching Hour, Vol. 1",
-   "meta": "Oct 20 · VIZ · adult supernatural drama",
-   "why": "Paru Itagaki (Beastars) on a bored wife's affair with a ghost. Mature, character-driven seinen that sits with Look Back and The Summer Hikaru Died on Dan's shelf.",
-   "url": "https://www.barnesandnoble.com/s/Witching%20Hour%20Paru%20Itagaki"
+   "t": "Jujutsu Kaisen Modulo, Vol. 1",
+   "meta": "Jan 5 · VIZ · shonen sci-fi action",
+   "why": "The Jujutsu Kaisen sequel, set decades later with alien visitors, drawn by Yuji Iwasaki from Gege Akutami's story. A new series for Dan's shelf next to Jujutsu Kaisen, Chainsaw Man, and Kagurabachi.",
+   "url": "https://www.barnesandnoble.com/s/Jujutsu%20Kaisen%20Modulo%20Vol%201"
   },
   {
    "tier": "S",
-   "t": "The Apothecary Diaries: Maomao's Notes on the Inner Palace, Vol. 1",
-   "meta": "Oct 20 · VIZ · palace mystery",
-   "why": "The other manga adaptation of the novels, drawn by Minoji Kurata. Cat collects the Square Enix version, so this is a second take on her favorite mystery for her shelf.",
-   "url": "https://www.barnesandnoble.com/s/Apothecary%20Diaries%20Maomao%27s%20Notes%20on%20the%20Inner%20Palace"
-  },
-  {
-   "tier": "S",
-   "t": "The Dunwich Horror",
-   "meta": "Sep 29 · Dark Horse · Lovecraft adaptation",
-   "why": "Gou Tanabe's Lovecraft adaptation in one book. Horror and a literary adaptation at once, so it fits Cat's Junji Ito and Manga Classics shelf and Dan's horror.",
-   "url": "https://www.barnesandnoble.com/s/Dunwich%20Horror%20Gou%20Tanabe"
+   "t": "Suicide Island, Vol. 1",
+   "meta": "Dec 8 · Dark Horse · survival thriller",
+   "why": "Young people who failed at suicide are left on a remote island to fend for themselves. Bleak survival story for Dan's shelf with Gantz, Alice in Borderland, and Gigant.",
+   "url": "https://www.barnesandnoble.com/s/Suicide%20Island%20Kouji%20Mori"
   },
   {
    "tier": "A",
-   "t": "The Apothecary Diaries: Xiaolan's Story, Vol. 1",
-   "meta": "Oct 6 · Square Enix · palace mystery spinoff",
-   "why": "The official spinoff told from Xiaolan's side. Same publisher as the Apothecary Diaries run Cat already owns.",
-   "url": "https://www.barnesandnoble.com/s/Apothecary%20Diaries%20Xiaolan%27s%20Story"
+   "t": "Rainy Day Serenade Omnibus 1",
+   "meta": "Jan 19 · Kodansha · time-travel historical romance",
+   "why": "A recurring dream sends Hina to 1907 Japan, where a man takes her for his fiancee. Period romance with a mystery hook for Cat, next to The Apothecary Diaries and Usotoki Rhetoric.",
+   "url": "https://www.barnesandnoble.com/s/Rainy%20Day%20Serenade%20Omnibus%201"
   },
   {
    "tier": "A",
-   "t": "Erin the Beast Player 1",
-   "meta": "Oct 27 · Kodansha · fantasy novel adaptation",
-   "why": "Adapts Nahoko Uehashi's novel about an exiled girl raised among beasts. A literary adaptation for Cat, next to her Manga Classics and Ascendance of a Bookworm.",
-   "url": "https://www.barnesandnoble.com/s/Erin%20the%20Beast%20Player%20manga"
+   "t": "#Gal x Gal Yuri, Vol. 1",
+   "meta": "Jan 12 · VIZ · GL romcom",
+   "why": "Two gyaru classmates fall for each other. GL for Cat, and the gal comedy Dan already reads in Gals Can't Be Kind to Otaku?! and Hokkaido Gals Are Super Adorable!",
+   "url": "https://www.barnesandnoble.com/s/Gal%20x%20Gal%20Yuri%20Vol%201"
   },
   {
    "tier": "A",
-   "t": "Yona of the Dawn (3-in-1 Edition), Vol. 1",
-   "meta": "Oct 20 · VIZ · historical fantasy romance",
-   "why": "A deposed princess and her guard on the run. Long-running shojo romance with a historical court setting, in Cat's lane next to The Apothecary Diaries.",
-   "url": "https://www.barnesandnoble.com/s/Yona%20of%20the%20Dawn%203-in-1%20Edition"
+   "t": "Yamada's Class Diary, Vol. 1",
+   "meta": "Dec 15 · Yen Press · school romcom",
+   "why": "The only girl in a formerly all-boys class is sent to drag a truant back to school. Slice-of-life romance for Dan next to Blue Box and Please Go Home, Miss Akutsu!",
+   "url": "https://www.barnesandnoble.com/s/Yamada%27s%20Class%20Diary"
   },
   {
    "tier": "A",
-   "t": "Fan/Girl x Call/Boy, Vol. 1",
-   "meta": "Oct 20 · Kodansha · otaku romcom",
-   "why": "A shut-in otaku hires a call boy who turns out to love her favorite game. Pitched for Sweat and Soap readers, which Cat owns, and close to Dan's I Want a Gal Gamer to Praise Me.",
-   "url": "https://www.barnesandnoble.com/s/Fan%20Girl%20x%20Call%20Boy"
-  },
-  {
-   "tier": "A",
-   "t": "The Dragon School Is Atop the Mountain",
-   "meta": "Oct 27 · Yen Press · fantasy stories",
-   "why": "Ryoko Kui (Delicious in Dungeon) short stories. Grounded fantasy for Dan's shelf next to Frieren and Witch Hat Atelier.",
-   "url": "https://www.barnesandnoble.com/s/Dragon%20School%20Is%20Atop%20the%20Mountain"
-  },
-  {
-   "tier": "A",
-   "t": "Asobi Asobase Omnibus, Vol. 1",
-   "meta": "Nov 17 · Dark Horse · gag comedy",
-   "why": "Three schoolgirls in a games club that escalates fast. Fits Dan's comedy shelf with Bocchi the Rock! and Komi Can't Communicate.",
-   "url": "https://www.barnesandnoble.com/s/Asobi%20Asobase%20Omnibus"
+   "t": "AIDOL Omnibus 1",
+   "meta": "Dec 1 · Kodansha · dark idol thriller",
+   "why": "An obsessive fan gains power over the electrical grid and uses it to push a mediocre idol's career. Dark showbiz story for Dan's shelf with [Oshi no Ko].",
+   "url": "https://www.barnesandnoble.com/s/AIDOL%20Omnibus%201"
   },
   {
    "tier": "B",
-   "t": "-N, Vol. 1",
-   "meta": "Oct 27 · Yen Press · mystery thriller",
-   "why": "Disappearances and a class massacre linked by the letter N. Dark mystery for either shelf, next to Paranoia Cage and Alice in Borderland.",
-   "url": "https://www.barnesandnoble.com/s/N%20Vol%201%20kurumuakumi"
+   "t": "Forget-Me-Not, Vol. 1",
+   "meta": "Jan 5 · Dark Horse · mature detective comedy",
+   "why": "Kenji Tsuruta's lazy Venetian detective must recover a stolen painting to inherit her grandfather's estate. Mature mystery that sits between Dan's seinen and Cat's mystery shelf.",
+   "url": "https://www.barnesandnoble.com/s/Forget-Me-Not%20Kenji%20Tsuruta"
   },
   {
    "tier": "B",
-   "t": "Two A.M. at the Dining Table, Vol. 1",
-   "meta": "Nov 3 · Yen Press · ghost family drama",
-   "why": "A woman's late mother returns as a tiny doll-like ghost. Quiet grief story for Dan, closer to Look Back than to horror.",
-   "url": "https://www.barnesandnoble.com/s/Two%20A.M.%20at%20the%20Dining%20Table"
+   "t": "Yakuza vs. Cat, Vol. 1",
+   "meta": "Dec 8 · VIZ · comedy",
+   "why": "A retired yakuza boss loses a turf war with a stray cat. Gag comedy for Dan next to Sho-Ha Shoten! and Komi Can't Communicate, with a cat angle for Cat's Cat Diary shelf.",
+   "url": "https://www.barnesandnoble.com/s/Yakuza%20vs.%20Cat%20Vol%201"
   },
   {
    "tier": "B",
-   "t": "Non and Akari: The Complete Omnibus",
-   "meta": "Nov 24 · Yen Press · cursed-doll comedy",
-   "why": "A girl befriends the cursed doll in her new house. Whole story in one book, light horror for Cat.",
-   "url": "https://www.barnesandnoble.com/s/Non%20and%20Akari%20Complete%20Omnibus"
+   "t": "Witches Can't Be Collared, Vol. 1 (manga)",
+   "meta": "Dec 15 · Yen Press · fantasy mystery",
+   "why": "A detective partners with a convicted witch to catch a killer called the Lifetaker. Case-of-the-week mystery for Cat, next to Usotoki Rhetoric.",
+   "url": "https://www.barnesandnoble.com/s/Witches%20Can%27t%20Be%20Collared%20manga"
   },
   {
    "tier": "B",
-   "t": "The Seaside Where Dragon Boys Dwell, Vol. 1",
-   "meta": "Nov 3 · VIZ · fantasy romance",
-   "why": "A young woman meets a dragon boy in a seaside folk town. Gentle romance for Cat.",
-   "url": "https://www.barnesandnoble.com/s/Seaside%20Where%20Dragon%20Boys%20Dwell"
+   "t": "Alma-chan Wants to Be a Family!, Vol. 1",
+   "meta": "Dec 15 · Yen Press · sci-fi family comedy",
+   "why": "Two scientists find their android insists they are her parents. Found-family comedy in the Miss Kobayashi's Dragon Maid space on Dan's shelf.",
+   "url": "https://www.barnesandnoble.com/s/Alma-chan%20Wants%20to%20Be%20a%20Family%20Vol%201"
   },
   {
    "tier": "B",
-   "t": "How to Keep a Human, Vol. 1",
-   "meta": "Oct 27 · Yen Press · monster slice-of-life",
-   "why": "Monsters discover humans make good pets. In the Miss Kobayashi's Dragon Maid space on Dan's shelf.",
-   "url": "https://www.barnesandnoble.com/s/How%20to%20Keep%20a%20Human%20Pieta"
+   "t": "Mr. Vamp Is a Vampire, Vol. 1",
+   "meta": "Dec 1 · Kodansha · vampire school comedy",
+   "why": "An immortal history teacher thinks his disguise works, and the whole school plays along. Light comedy for Dan next to Komi Can't Communicate.",
+   "url": "https://www.barnesandnoble.com/s/Mr.%20Vamp%20Is%20a%20Vampire"
   },
   {
    "tier": "B",
-   "t": "Stalker Stalks Stalker, Vol. 1",
-   "meta": "Oct 20 · Square Enix · romcom",
-   "why": "Three college students each secretly stalking the next. One-joke romcom for Dan's comedy lane.",
-   "url": "https://www.barnesandnoble.com/s/Stalker%20Stalks%20Stalker"
-  },
-  {
-   "tier": "B",
-   "t": "Albus Changes the World, Vol. 1",
-   "meta": "Nov 10 · VIZ · time-loop fantasy action",
-   "why": "A hero speed-runs his quest by rewinding time. Shonen action for Dan if Undead Unluck's loop stuff landed.",
-   "url": "https://www.barnesandnoble.com/s/Albus%20Changes%20the%20World"
-  },
-  {
-   "tier": "B",
-   "t": "Babanba BanBan Vampire, Vol. 1",
-   "meta": "Nov 10 · Dark Horse · vampire comedy",
-   "why": "A 450-year-old vampire guards a boy's virginity for his blood. Mature gag comedy, between Dan's and Cat's lanes.",
-   "url": "https://www.barnesandnoble.com/s/Babanba%20BanBan%20Vampire"
-  },
-  {
-   "tier": "B",
-   "t": "My Journey to Her",
-   "meta": "Oct 6 · Kodansha · memoir",
-   "why": "Yuna Hirasawa's Eisner-winning memoir, now in print. A single, personal volume.",
-   "url": "https://www.barnesandnoble.com/s/My%20Journey%20to%20Her%20Yuna%20Hirasawa"
+   "t": "A Quirky Girl Is Inviting Me to Bed, Vol. 1",
+   "meta": "Dec 29 · Ghost Ship · mature romcom",
+   "why": "A student moves in with his older cousin in Tokyo and draws attention from several women. Fits Dan's mature comedy lane with We Started a Threesome!! and Breasts Are My Favorite Thing in the World!",
+   "url": "https://www.barnesandnoble.com/s/A%20Quirky%20Girl%20Is%20Inviting%20Me%20to%20Bed"
   },
   {
    "tier": "C",
-   "t": "Living with My Old Cat, Vol. 1",
-   "meta": "Oct 13 · Seven Seas · pet slice-of-life",
-   "why": "Full-color life with a senior cat. Sweet but slight, a gift-shelf book next to Cat's Junji Ito's Cat Diary.",
-   "url": "https://www.barnesandnoble.com/s/Living%20with%20My%20Old%20Cat"
-  },
-  {
-   "tier": "C",
-   "t": "Meiji-Era Master-and-Servant Tungsten, Vol. 1",
-   "meta": "Nov 3 · Yen Press · historical BL",
-   "why": "An engineer and his attendant building a power plant in 1900s Japan. Historical setting may interest Cat; retailers shelve it as BL.",
-   "url": "https://www.barnesandnoble.com/s/Meiji-Era%20Master-and-Servant%20Tungsten"
-  },
-  {
-   "tier": "C",
-   "t": "Full Metal Panic! Family, Vol. 1",
-   "meta": "Nov 3 · Yen Press · mecha family comedy",
-   "why": "The original cast twenty years on, raising kids. Mostly for existing Full Metal Panic! fans.",
-   "url": "https://www.barnesandnoble.com/s/Full%20Metal%20Panic%20Family"
-  },
-  {
-   "tier": "C",
-   "t": "GalaXic Baseball League, Vol. 1",
-   "meta": "Oct 13 · VIZ · sports sci-fi",
-   "why": "Acky Bright's MLB-licensed space baseball. A tie-in more than a series.",
-   "url": "https://www.barnesandnoble.com/s/GalaXic%20Baseball%20League"
-  },
-  {
-   "tier": "C",
-   "t": "Fate/Prototype: Fragments of Sky Silver, Vol. 1",
-   "meta": "Oct 27 · Yen Press · Fate spinoff",
-   "why": "A 1991 Holy Grail War. Franchise reading only.",
-   "url": "https://www.barnesandnoble.com/s/Fate%20Prototype%20Fragments%20of%20Sky%20Silver"
-  },
-  {
-   "tier": "C",
-   "t": "Fate Rewinder: All Great Achievements Require Time, Vol. 1",
-   "meta": "Oct 27 · Yen Press · fantasy",
-   "why": "An agency that rescues people from bad fates. Standard premise.",
-   "url": "https://www.barnesandnoble.com/s/Fate%20Rewinder"
-  },
-  {
-   "tier": "C",
-   "t": "The Record of Fantastical Nomenclature, Vol. 1",
-   "meta": "Oct 27 · Yen Press · supernatural fantasy",
-   "why": "A man who sees hidden creatures is hired to catalog them. Quiet, could go either way.",
-   "url": "https://www.barnesandnoble.com/s/Record%20of%20Fantastical%20Nomenclature"
-  },
-  {
-   "tier": "C",
-   "t": "Tokujo-chan: The Girls Who Brighten Your Day",
-   "meta": "Oct 27 · Yen Press · pin-up collection",
-   "why": "Illustrated everyday-girl vignettes. Closer to an art book than a story.",
-   "url": "https://www.barnesandnoble.com/s/Tokujo-chan"
-  },
-  {
-   "tier": "C",
-   "t": "Resident Evil: Death Island, Vol. 1",
-   "meta": "Oct 6 · Titan Manga · game tie-in",
-   "why": "Film adaptation for franchise fans.",
-   "url": "https://www.barnesandnoble.com/s/Resident%20Evil%20Death%20Island%20manga"
-  },
-  {
-   "tier": "D",
-   "t": "Defying Expectations with Gravity Magic to Be Unparalleled, Vol. 1",
-   "meta": "Oct 27 · Yen Press · isekai",
-   "why": "Reincarnated adventurer with secretly overpowered magic. Outside both lanes.",
-   "url": "https://www.barnesandnoble.com/s/Defying%20Expectations%20with%20Gravity%20Magic"
+   "t": "Love Me to My Core, Vol. 1",
+   "meta": "Dec 15 · Yen Press · BL romance",
+   "why": "A classmate written off as a jerk wants someone to see past his looks. Rated 18+ and shelved as BL, outside both main lanes.",
+   "url": "https://www.barnesandnoble.com/s/Love%20Me%20to%20My%20Core%20An%20Momose"
   }
  ]
 }
